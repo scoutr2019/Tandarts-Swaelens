@@ -11,12 +11,13 @@ export function ThemeToggle() {
       variant="ghost" 
       size="icon" 
       onClick={toggleTheme}
-      className="rounded-full"
+      className="rounded-full hover:bg-dental-blue-light dark:hover:bg-gray-800"
+      aria-label="Toggle theme"
     >
       {theme === "light" ? (
-        <Moon className="h-[1.2rem] w-[1.2rem]" />
+        <Moon className="h-[1.2rem] w-[1.2rem] text-dental-blue-dark" />
       ) : (
-        <Sun className="h-[1.2rem] w-[1.2rem]" />
+        <Sun className="h-[1.2rem] w-[1.2rem] text-dental-blue-light" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>

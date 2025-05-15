@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServiceCard = ({ title, description, icon, details }: ServiceCardProps) => {
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col h-full">
+    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md hover:shadow-lg transition-shadow p-6 flex flex-col h-full border border-gray-100 dark:border-gray-700">
       <div className="flex items-center gap-4 mb-4">
         <div className="p-3 bg-dental-blue-light dark:bg-dental-blue-dark/30 rounded-lg text-dental-blue-dark dark:text-dental-blue-light">
           {icon}
