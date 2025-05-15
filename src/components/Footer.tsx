@@ -1,5 +1,6 @@
 
 import { Stethoscope } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -20,13 +21,21 @@ const Footer = () => {
           </div>
         </div>
         
-        <div className="border-t border-white/20 mt-8 pt-8 text-center">
-          <p className="text-sm text-white/70">
+        <div className="border-t border-white/20 mt-8 pt-8">
+          <nav className="flex flex-wrap justify-center md:justify-start gap-4 mb-4">
+            <Link to="/" className="text-white/80 hover:text-white hover:underline">Home</Link>
+            <Link to="/diensten" className="text-white/80 hover:text-white hover:underline">Diensten</Link>
+            <Link to="/team" className="text-white/80 hover:text-white hover:underline">Team</Link>
+            <Link to="/afspraken" className="text-white/80 hover:text-white hover:underline">Afspraken</Link>
+            <Link to="/contact" className="text-white/80 hover:text-white hover:underline">Contact</Link>
+          </nav>
+          
+          <p className="text-sm text-white/70 text-center md:text-left">
             © {currentYear} Tandartspraktijk Dr. Christian Swaelens. Alle rechten voorbehouden.
           </p>
-          <p className="text-sm text-white/70 mt-2">
-            <a href="#" className="hover:underline">Privacybeleid</a> | 
-            <a href="#" className="hover:underline ml-2">Cookiebeleid</a>
+          <p className="text-sm text-white/70 mt-2 text-center md:text-left">
+            <Link to="/privacy" className="hover:underline">Privacybeleid</Link> | 
+            <Link to="/cookies" className="hover:underline ml-2">Cookiebeleid</Link>
           </p>
         </div>
       </div>

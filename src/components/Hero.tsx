@@ -1,9 +1,10 @@
 
 import { Calendar } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-20">
+    <section className="pb-16 md:pb-20">
       <div className="dental-container">
         <div className="flex flex-col md:flex-row md:items-center gap-8 md:gap-12">
           <div className="md:w-1/2 animate-fade-in">
@@ -15,13 +16,13 @@ const Hero = () => {
               Welkom bij Tandartspraktijk Swaelens in Gent. Wij staan voor persoonlijke tandheelkunde, met aandacht voor detail en een angstvrije ervaring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#contact" className="dental-btn-primary flex items-center justify-center gap-2">
+              <Link to="/afspraken" className="dental-btn-primary flex items-center justify-center gap-2">
                 <Calendar className="h-5 w-5" />
                 <span>Maak een afspraak</span>
-              </a>
-              <a href="#diensten" className="dental-btn-outline flex items-center justify-center">
+              </Link>
+              <Link to="/diensten" className="dental-btn-outline flex items-center justify-center">
                 <span>Onze diensten</span>
-              </a>
+              </Link>
             </div>
           </div>
           <div className="md:w-1/2 relative rounded-2xl overflow-hidden shadow-xl h-[300px] md:h-[400px] animate-fade-in" style={{ animationDelay: '0.2s' }}>

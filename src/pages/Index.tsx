@@ -1,23 +1,18 @@
 
-import Header from "@/components/Header";
+import Layout from "@/components/Layout";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
-import Team from "@/components/Team";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+import TeamSection from "@/components/Team";
+import ContactSection from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <Hero />
-        <Services />
-        <Team />
-        <Contact />
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <Hero />
+      <Services />
+      <TeamSection />
+      <ContactSection />
+    </Layout>
   );
 };
 
