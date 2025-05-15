@@ -1,10 +1,11 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 210 50% 98%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -13,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 217 80% 57%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -30,24 +31,17 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 217 80% 57%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +90,32 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-dental-offwhite text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-dental-blue-dark font-semibold;
+  }
+}
+
+@layer components {
+  .dental-container {
+    @apply container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-dental-blue-dark mb-6 md:mb-10;
+  }
+
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-medium text-dental-blue-medium mb-4;
+  }
+
+  .dental-btn-primary {
+    @apply bg-dental-blue-dark hover:bg-dental-blue-medium text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
+  }
+
+  .dental-btn-outline {
+    @apply border-2 border-dental-blue-dark text-dental-blue-dark hover:bg-dental-blue-light font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
   }
 }
