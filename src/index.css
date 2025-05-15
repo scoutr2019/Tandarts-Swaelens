@@ -90,11 +90,11 @@
   }
 
   body {
-    @apply bg-dental-offwhite text-foreground font-sans;
+    @apply bg-dental-offwhite text-foreground font-sans dark:bg-gray-950;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-dental-blue-dark font-semibold;
+    @apply text-dental-blue-dark font-semibold dark:text-dental-blue-light;
   }
 }
 
@@ -104,7 +104,7 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-dental-blue-dark mb-6 md:mb-10;
+    @apply text-3xl md:text-4xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-6 md:mb-10;
   }
 
   .section-subtitle {
@@ -112,10 +112,10 @@
   }
 
   .dental-btn-primary {
-    @apply bg-dental-blue-dark hover:bg-dental-blue-medium text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
+    @apply bg-dental-blue-dark hover:bg-dental-blue-medium dark:bg-dental-blue-dark dark:hover:bg-dental-blue-medium text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
   }
 
   .dental-btn-outline {
-    @apply border-2 border-dental-blue-dark text-dental-blue-dark hover:bg-dental-blue-light font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
+    @apply border-2 border-dental-blue-dark text-dental-blue-dark hover:bg-dental-blue-light dark:border-dental-blue-light dark:text-dental-blue-light dark:hover:bg-dental-blue-dark/30 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
   }
 }
