@@ -1,5 +1,5 @@
 
-import { Teeth, Toothbrush, User, Tooth, Check, Calendar } from "lucide-react";
+import { Stethoscope, Check, User, FileText, Calendar, HeartPulse } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -20,7 +20,7 @@ const Services = () => {
     {
       title: "Vullingen",
       description: "Moderne technieken voor duurzame en esthetische vullingen die uw natuurlijke gebit herstellen.",
-      icon: <Tooth className="h-6 w-6" />,
+      icon: <FileText className="h-6 w-6" />,
       details: [
         "Composietvullingen",
         "Inlays en onlays",
@@ -43,7 +43,7 @@ const Services = () => {
     {
       title: "Orthodontie",
       description: "Solutions voor een rechter gebit en een mooiere glimlach voor zowel kinderen als volwassenen.",
-      icon: <Teeth className="h-6 w-6" />,
+      icon: <HeartPulse className="h-6 w-6" />,
       details: [
         "Uitgebreide evaluaties",
         "Traditionele beugels",
@@ -55,7 +55,7 @@ const Services = () => {
     {
       title: "Esthetische tandheelkunde",
       description: "Verbeter uw glimlach met onze esthetische behandelingen voor een stralend resultaat.",
-      icon: <Toothbrush className="h-6 w-6" />,
+      icon: <Stethoscope className="h-6 w-6" />,
       details: [
         "Professioneel tanden bleken",
         "Facings en veneers",

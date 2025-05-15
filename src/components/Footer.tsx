@@ -1,5 +1,5 @@
 
-import { Tooth } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="dental-container">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-2">
-            <Tooth className="h-8 w-8" />
+            <Stethoscope className="h-8 w-8" />
             <span className="text-xl font-bold">Tandarts Swaelens</span>
           </div>
           

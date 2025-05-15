@@ -1,6 +1,6 @@
 
 import { useState, useEffect } from "react";
-import { Tooth } from "lucide-react";
+import { Stethoscope } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,7 +24,7 @@ const Header = () => {
     >
       <div className="dental-container flex justify-between items-center">
         <a href="#" className="flex items-center gap-2">
-          <Tooth className="h-8 w-8 text-dental-blue-dark" />
+          <Stethoscope className="h-8 w-8 text-dental-blue-dark" />
           <span className="text-xl font-bold text-dental-blue-dark">Tandarts Swaelens</span>
         </a>
 
