@@ -31,18 +31,23 @@ export function ThemeProvider({
   storageKey = "dental-ui-theme",
   ...props
 }: ThemeProviderProps) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>(defaultTheme);
+  
+  // Initialize theme from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem(storageKey) as Theme;
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, [storageKey]);
 
+  // Apply theme class to document and save to localStorage
   useEffect(() => {
     const root = window.document.documentElement;
     
     root.classList.remove("light", "dark");
     root.classList.add(theme);
-  }, [theme]);
-
-  useEffect(() => {
+    
     localStorage.setItem(storageKey, theme);
   }, [theme, storageKey]);
 

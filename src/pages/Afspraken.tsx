@@ -19,40 +19,24 @@ const Afspraken = () => {
           </AlertDescription>
         </Alert>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 gap-8">
           <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 md:p-8">
-            <h2 className="text-2xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-4">Voor bestaande patiënten</h2>
+            <h2 className="text-2xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-4">Online afspraak maken</h2>
             <p className="text-gray-700 dark:text-gray-200 mb-6">
-              Als u al patiënt bent bij onze praktijk, kunt u hieronder online een afspraak maken. 
-              Kies een geschikte datum en tijd voor uw volgende afspraak.
+              Als u al patiënt bent bij onze praktijk, kunt u hieronder direct een afspraak maken.
             </p>
             
-            <div className="space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-dental-blue-light dark:bg-dental-blue-dark/50 flex items-center justify-center">
-                  <span className="font-bold text-dental-blue-dark dark:text-dental-blue-light">1</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-200">Kies het type behandeling dat u nodig heeft</p>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-dental-blue-light dark:bg-dental-blue-dark/50 flex items-center justify-center">
-                  <span className="font-bold text-dental-blue-dark dark:text-dental-blue-light">2</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-200">Selecteer een beschikbare datum en tijd</p>
-              </div>
-              
-              <div className="flex items-center gap-3">
-                <div className="flex-shrink-0 h-10 w-10 rounded-full bg-dental-blue-light dark:bg-dental-blue-dark/50 flex items-center justify-center">
-                  <span className="font-bold text-dental-blue-dark dark:text-dental-blue-light">3</span>
-                </div>
-                <p className="text-gray-700 dark:text-gray-200">Ontvang een bevestiging van uw afspraak</p>
-              </div>
-              
-              <Link to="/afspraken" className="dental-btn-primary flex items-center justify-center gap-2 w-full">
-                <Calendar className="h-5 w-5" />
-                <span>Online afspraak maken</span>
-              </Link>
+            <div className="w-full bg-white rounded-lg overflow-hidden">
+              <iframe 
+                src="https://agenda.clickdocdentist.be/short/mgeqrWZ8KAm93jV5" 
+                width="100%" 
+                height="660" 
+                scrolling="true" 
+                frameBorder="1" 
+                allow="encrypted-media"
+                title="Tandarts Swaelens Afspraak Systeem"
+                className="border border-dental-blue-light dark:border-dental-blue-dark rounded-lg"
+              ></iframe>
             </div>
           </div>
           
