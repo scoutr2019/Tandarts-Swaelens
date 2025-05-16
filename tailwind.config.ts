@@ -64,9 +64,9 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				dental: {
-					'blue-light': '#D3E4FD',
-					'blue-medium': '#86B6F2',
-					'blue-dark': '#4B89DA',
+					'blue-light': '#E7F2FF',
+					'blue-medium': '#3B82F6',
+					'blue-dark': '#1E40AF',
 					'white': '#FFFFFF',
 					'offwhite': '#F8FAFC',
 					'gray-light': '#F1F1F1'

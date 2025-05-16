@@ -12,7 +12,7 @@ const Hero = () => {
               Uw glimlach, <br />
               <span className="text-dental-blue-medium">onze zorg</span>
             </h1>
-            <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-lg">
+            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-lg">
               Welkom bij Tandartspraktijk Swaelens in Gent. Wij staan voor persoonlijke tandheelkunde, met aandacht voor detail en een angstvrije ervaring.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">

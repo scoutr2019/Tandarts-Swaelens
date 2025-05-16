@@ -5,6 +5,7 @@ import ServiceCard from "./ServiceCard";
 const Services = () => {
   const services = [
     {
+      id: "preventie",
       title: "Preventie",
       description: "Voorkomen is beter dan genezen. Onze preventieve zorg houdt uw gebit in topconditie.",
       icon: <Check className="h-6 w-6" />,
@@ -18,6 +19,7 @@ const Services = () => {
       ]
     },
     {
+      id: "vullingen",
       title: "Vullingen",
       description: "Moderne technieken voor duurzame en esthetische vullingen die uw natuurlijke gebit herstellen.",
       icon: <FileText className="h-6 w-6" />,
@@ -29,6 +31,7 @@ const Services = () => {
       ]
     },
     {
+      id: "kinderen",
       title: "Kindertandheelkunde",
       description: "Kindvriendelijke zorg die uw kind een positieve ervaring met de tandarts geeft.",
       icon: <User className="h-6 w-6" />,
@@ -41,6 +44,7 @@ const Services = () => {
       ]
     },
     {
+      id: "orthodontie",
       title: "Orthodontie",
       description: "Solutions voor een rechter gebit en een mooiere glimlach voor zowel kinderen als volwassenen.",
       icon: <HeartPulse className="h-6 w-6" />,
@@ -53,6 +57,7 @@ const Services = () => {
       ]
     },
     {
+      id: "esthetisch",
       title: "Esthetische tandheelkunde",
       description: "Verbeter uw glimlach met onze esthetische behandelingen voor een stralend resultaat.",
       icon: <Stethoscope className="h-6 w-6" />,
@@ -65,6 +70,7 @@ const Services = () => {
       ]
     },
     {
+      id: "kronen",
       title: "Kroon- en brugwerk",
       description: "Herstel van beschadigde tanden met hoogwaardige kronen en bruggen die er natuurlijk uitzien.",
       icon: <Calendar className="h-6 w-6" />,
@@ -78,22 +84,23 @@ const Services = () => {
   ];
 
   return (
-    <section id="diensten" className="py-16 bg-dental-blue-light/30">
+    <section id="diensten" className="py-16 bg-dental-blue-light/30 dark:bg-dental-blue-dark/10">
       <div className="dental-container">
         <h2 className="section-title text-center">Onze diensten</h2>
-        <p className="text-center text-gray-700 max-w-3xl mx-auto mb-12">
+        <p className="text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-12">
           Bij Tandarts Swaelens bieden we een uitgebreid pakket aan tandheelkundige diensten aan. Van preventieve zorg tot complexe behandelingen, alles met persoonlijke aandacht.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              title={service.title}
-              description={service.description}
-              icon={service.icon}
-              details={service.details}
-            />
+            <div id={service.id} key={index}>
+              <ServiceCard
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+                details={service.details}
+              />
+            </div>
           ))}
         </div>
 
