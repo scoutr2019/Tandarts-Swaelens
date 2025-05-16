@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Services from "@/components/Services";
 import TeamSection from "@/components/Team";
 import ContactSection from "@/components/Contact";
+import Hero from "@/components/Hero";
 
 const Index = () => {
   // Top 3 services to highlight
@@ -32,6 +33,9 @@ const Index = () => {
 
   return (
     <Layout>
+      {/* Banner Section */}
+      <Hero />
+      
       {/* Welcome Section */}
       <section className="py-12">
         <div className="dental-container">
