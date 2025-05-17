@@ -1,43 +1,82 @@
 
-import { Stethoscope } from "lucide-react";
 import { Link } from "react-router-dom";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Separator } from "./ui/separator";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dental-blue-dark text-white dark:bg-gray-900 py-12">
+    <footer className="bg-[#F2F5FA] text-gray-700 py-12">
       <div className="dental-container">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-2">
-            <Stethoscope className="h-8 w-8" />
-            <span className="text-xl font-bold">Tandarts Swaelens</span>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Column 1: Tandarts Info */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Tandarts Swaelens</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <MapPin className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0 mt-0.5" />
+                <span>Kortrijksesteenweg 215, 9000 Gent</span>
+              </li>
+              <li className="flex items-center">
+                <Phone className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0" />
+                <a href="tel:+3292221213" className="hover:text-[#1E90FF]">09 222 12 13</a>
+              </li>
+              <li className="flex items-center">
+                <Mail className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0" />
+                <a href="mailto:info@tandartsswaelens.be" className="hover:text-[#1E90FF]">info@tandartsswaelens.be</a>
+              </li>
+            </ul>
           </div>
           
-          <div className="text-center md:text-right">
-            <p>Kortrijksesteenweg 215, 9000 Gent</p>
-            <p>Tel: <a href="tel:+3292221213" className="hover:underline">09 222 12 13</a></p>
-            <p>E-mail: <a href="mailto:info@tandartsswaelens.be" className="hover:underline">info@tandartsswaelens.be</a></p>
+          {/* Column 2: Opening Hours */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Telefonische Openingsuren</h3>
+            <ul className="space-y-3">
+              <li className="flex items-start">
+                <Clock className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0 mt-0.5" />
+                <div>
+                  <p><strong>Open:</strong></p>
+                  <p>Maandag, woensdag & vrijdag</p>
+                  <p>09:00-13:00 & 14:00-18:00</p>
+                </div>
+              </li>
+              <li className="ml-7 mt-4">
+                <p><strong>Gesloten:</strong></p>
+                <p>Dinsdag, donderdag, zaterdag, zondag</p>
+                <p>en feestdagen</p>
+              </li>
+            </ul>
+          </div>
+          
+          {/* Column 3: Quick Links */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">Snelle Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link to="/" className="hover:text-[#1E90FF]">Home</Link>
+              </li>
+              <li>
+                <Link to="/diensten" className="hover:text-[#1E90FF]">Diensten</Link>
+              </li>
+              <li>
+                <Link to="/team" className="hover:text-[#1E90FF]">Team</Link>
+              </li>
+              <li>
+                <Link to="/contact" className="hover:text-[#1E90FF]">Contact</Link>
+              </li>
+              <li>
+                <Link to="/afspraken" className="hover:text-[#1E90FF]">Maak een afspraak</Link>
+              </li>
+            </ul>
           </div>
         </div>
         
-        <div className="border-t border-white/20 mt-8 pt-8">
-          <nav className="flex flex-wrap justify-center md:justify-start gap-4 mb-4">
-            <Link to="/" className="text-white/80 hover:text-white hover:underline">Home</Link>
-            <Link to="/diensten" className="text-white/80 hover:text-white hover:underline">Diensten</Link>
-            <Link to="/team" className="text-white/80 hover:text-white hover:underline">Team</Link>
-            <Link to="/afspraken" className="text-white/80 hover:text-white hover:underline">Afspraken</Link>
-            <Link to="/contact" className="text-white/80 hover:text-white hover:underline">Contact</Link>
-          </nav>
-          
-          <p className="text-sm text-white/70 text-center md:text-left">
-            © {currentYear} Tandartspraktijk Dr. Christian Swaelens. Alle rechten voorbehouden.
-          </p>
-          <p className="text-sm text-white/70 mt-2 text-center md:text-left">
-            <Link to="/privacy" className="hover:underline">Privacybeleid</Link> | 
-            <Link to="/cookies" className="hover:underline ml-2">Cookiebeleid</Link>
-          </p>
-        </div>
+        <Separator className="my-8 bg-gray-200" />
+        
+        <p className="text-sm text-center">
+          © {currentYear} Tandarts Swaelens. Alle rechten voorbehouden.
+        </p>
       </div>
     </footer>
   );

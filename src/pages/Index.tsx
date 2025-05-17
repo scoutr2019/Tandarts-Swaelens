@@ -66,30 +66,6 @@ const Index = () => {
               </div>
             </div>
           </div>
-          
-          {/* Team Highlight - Anneleen */}
-          <div className="max-w-3xl mx-auto mb-16">
-            <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/3 order-2 md:order-1">
-                <div className="rounded-xl overflow-hidden shadow-lg">
-                  <img 
-                    src="/lovable-uploads/347a82c7-f3a8-4776-a337-66d18e3aa519.png" 
-                    alt="Anneleen" 
-                    className="w-full h-auto object-cover"
-                  />
-                </div>
-              </div>
-              <div className="md:w-2/3 order-1 md:order-2">
-                <h3 className="text-2xl font-bold mb-4">Ontmoet Anneleen</h3>
-                <p className="text-gray-700 dark:text-gray-200 mb-6">
-                  Anneleen is een ervaren tandartsassistente die zich specialiseert in preventieve tandheelkunde. Met haar vriendelijke aanpak zorgt ze ervoor dat patiënten zich op hun gemak voelen en de beste zorg krijgen.
-                </p>
-                <p className="text-gray-700 dark:text-gray-200 mb-6">
-                  Ze is toegewijd aan het bieden van een comfortabele ervaring voor elke patiënt en neemt de tijd om alle vragen te beantwoorden.
-                </p>
-              </div>
-            </div>
-          </div>
 
           {/* Featured Services */}
           <div className="mb-16">

@@ -26,11 +26,11 @@ const Team = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {team.map((member, index) => (
             <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden flex flex-col">
-              <div className="h-64 overflow-hidden">
+              <div className="h-80 overflow-hidden">
                 <img 
                   src={member.image} 
                   alt={member.name} 
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">
