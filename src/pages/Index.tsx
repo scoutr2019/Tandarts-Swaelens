@@ -40,14 +40,6 @@ const Index = () => {
       <section className="py-16">
         <div className="dental-container">
           <div className="max-w-3xl mx-auto mb-12">
-            <div className="flex items-center justify-center mb-8">
-              <img 
-                src="/lovable-uploads/70d487cc-c48f-467d-ba2b-76ae7b4ddd60.png" 
-                alt="Tandarts Swaelens Logo" 
-                className="h-20"
-              />
-            </div>
-            
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-6">Welkom bij Tandarts Swaelens</h2>
             
             <div className="flex flex-col md:flex-row gap-8 items-center">
@@ -90,7 +82,7 @@ const Index = () => {
               <div className="md:w-2/3 order-1 md:order-2">
                 <h3 className="text-2xl font-bold mb-4">Ontmoet Anneleen</h3>
                 <p className="text-gray-700 dark:text-gray-200 mb-6">
-                  Anneleen is een ervaren tandarts die zich specialiseert in preventieve tandheelkunde. Met haar vriendelijke aanpak zorgt ze ervoor dat patiënten zich op hun gemak voelen en de beste zorg krijgen.
+                  Anneleen is een ervaren tandartsassistente die zich specialiseert in preventieve tandheelkunde. Met haar vriendelijke aanpak zorgt ze ervoor dat patiënten zich op hun gemak voelen en de beste zorg krijgen.
                 </p>
                 <p className="text-gray-700 dark:text-gray-200 mb-6">
                   Ze is toegewijd aan het bieden van een comfortabele ervaring voor elke patiënt en neemt de tijd om alle vragen te beantwoorden.

@@ -5,13 +5,13 @@ const Team = () => {
       name: "Dr. Christian Swaelens",
       role: "Tandarts",
       bio: "Dr. Christian Swaelens leidt de praktijk met meer dan 15 jaar ervaring. Hij staat bekend om zijn persoonlijke aanpak en nauwkeurige behandelingen. Zijn focus ligt op het creëren van een angstvrije ervaring voor elke patiënt.",
-      image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=1964&auto=format&fit=crop"
+      image: "/lovable-uploads/42ab460c-7716-40d6-8ccc-b35dd0215c9f.png"
     },
     {
       name: "Anneleen Moonens",
       role: "Tandartsassistente",
       bio: "Anneleen staat bekend om haar kalmerende aanpak en vriendelijke persoonlijkheid. Ze zorgt ervoor dat elke patiënt zich op zijn gemak voelt en helpt bij het soepel laten verlopen van alle behandelingen.",
-      image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?q=80&w=1974&auto=format&fit=crop"
+      image: "/lovable-uploads/347a82c7-f3a8-4776-a337-66d18e3aa519.png"
     }
   ];
 

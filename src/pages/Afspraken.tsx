@@ -2,14 +2,18 @@
 import { Calendar, Phone, AlertCircle } from "lucide-react";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import Layout from "@/components/Layout";
+import PageBanner from "@/components/PageBanner";
 import { Link } from "react-router-dom";
 
 const Afspraken = () => {
   return (
     <Layout>
+      <PageBanner 
+        title="Afspraak maken"
+        description="Plan eenvoudig een afspraak bij Tandarts Swaelens. Bestaande patiënten kunnen online een afspraak maken, nieuwe patiënten kunnen telefonisch contact opnemen."
+      />
+      
       <div className="dental-container py-12">
-        <h1 className="text-4xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-8">Afspraak maken</h1>
-        
         <Alert className="mb-8 bg-dental-blue-light/20 dark:bg-dental-blue-dark/20 border-dental-blue-medium dark:border-dental-blue-light">
           <AlertCircle className="h-5 w-5 text-dental-blue-dark dark:text-dental-blue-light" />
           <AlertTitle className="text-dental-blue-dark dark:text-dental-blue-light font-medium text-lg">Belangrijke informatie</AlertTitle>

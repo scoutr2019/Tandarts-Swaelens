@@ -1,6 +1,5 @@
 
 import { useState, useEffect } from "react";
-import { Stethoscope } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
 
@@ -31,9 +30,12 @@ const Header = () => {
       }`}
     >
       <div className="dental-container flex justify-between items-center">
-        <Link to="/" className="flex items-center gap-2">
-          <Stethoscope className="h-8 w-8 text-dental-blue-dark dark:text-dental-blue-light" />
-          <span className="text-xl font-bold text-dental-blue-dark dark:text-dental-blue-light">Tandarts Swaelens</span>
+        <Link to="/" className="flex items-center">
+          <img 
+            src="/lovable-uploads/70d487cc-c48f-467d-ba2b-76ae7b4ddd60.png" 
+            alt="Tandarts Swaelens Logo" 
+            className="h-10"
+          />
         </Link>
 
         <div className="hidden md:flex items-center gap-6">
