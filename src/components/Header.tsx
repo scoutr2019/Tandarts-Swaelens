@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ThemeToggle } from "./ThemeToggle";
+import { Calendar } from "lucide-react";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -43,13 +44,13 @@ const Header = () => {
             <Link to="/" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}>Home</Link>
             <Link to="/diensten" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}>Diensten</Link>
             <Link to="/team" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}>Team</Link>
-            <Link to="/afspraken" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/afspraken" ? "text-dental-blue-medium" : ""}`}>Afspraken</Link>
             <Link to="/contact" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}>Contact</Link>
           </nav>
           <ThemeToggle />
-          <a href="tel:+3292221213" className="dental-btn-primary flex items-center gap-2">
-            <span>09 222 12 13</span>
-          </a>
+          <Link to="/afspraken" className="dental-btn-primary flex items-center gap-2">
+            <Calendar className="h-4 w-4" />
+            <span>Maak een afspraak</span>
+          </Link>
         </div>
 
         <div className="md:hidden flex items-center gap-2">
@@ -75,11 +76,11 @@ const Header = () => {
           <Link to="/" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}>Home</Link>
           <Link to="/diensten" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}>Diensten</Link>
           <Link to="/team" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}>Team</Link>
-          <Link to="/afspraken" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/afspraken" ? "text-dental-blue-medium" : ""}`}>Afspraken</Link>
           <Link to="/contact" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}>Contact</Link>
-          <a href="tel:+3292221213" className="dental-btn-primary flex items-center justify-center gap-2 mt-2">
-            <span>09 222 12 13</span>
-          </a>
+          <Link to="/afspraken" className="dental-btn-primary flex items-center justify-center gap-2 mt-2">
+            <Calendar className="h-4 w-4" />
+            <span>Maak een afspraak</span>
+          </Link>
         </nav>
       </div>
     </header>

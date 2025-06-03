@@ -32,21 +32,23 @@ const Footer = () => {
           {/* Column 2: Opening Hours */}
           <div>
             <h3 className="text-lg font-bold mb-4">Telefonische Openingsuren</h3>
-            <ul className="space-y-3">
-              <li className="flex items-start">
+            <div className="space-y-4">
+              <div className="flex items-start">
                 <Clock className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0 mt-0.5" />
-                <div>
-                  <p><strong>Open:</strong></p>
-                  <p>Maandag, woensdag & vrijdag</p>
-                  <p>09:00-13:00 & 14:00-18:00</p>
+                <div className="text-sm">
+                  <div className="mb-2">
+                    <p className="font-semibold text-[#1E90FF]">Open:</p>
+                    <p>Maandag, woensdag & vrijdag</p>
+                    <p>09:00-13:00 & 14:00-18:00</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-600">Gesloten:</p>
+                    <p>Dinsdag, donderdag, zaterdag,</p>
+                    <p>zondag en feestdagen</p>
+                  </div>
                 </div>
-              </li>
-              <li className="ml-7 mt-4">
-                <p><strong>Gesloten:</strong></p>
-                <p>Dinsdag, donderdag, zaterdag, zondag</p>
-                <p>en feestdagen</p>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           
           {/* Column 3: Quick Links */}

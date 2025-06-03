@@ -23,9 +23,9 @@ const PageBanner = ({ title, description, children }: PageBannerProps) => {
       {/* Content overlay */}
       <div className="dental-container relative h-full flex flex-col justify-center">
         <div className="text-white max-w-xl">
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">{title}</h1>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">{title}</h1>
           {description && (
-            <p className="text-lg md:text-xl mb-8">{description}</p>
+            <p className="text-lg md:text-xl mb-8 text-white">{description}</p>
           )}
           {children}
         </div>

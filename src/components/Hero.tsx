@@ -18,11 +18,11 @@ const Hero = () => {
       {/* Content overlay */}
       <div className="dental-container relative h-full flex flex-col justify-center">
         <div className="text-white max-w-lg">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Uw glimlach, <br />
-            <span>onze zorg</span>
+            <span className="text-white">onze zorg</span>
           </h1>
-          <p className="text-lg md:text-xl mb-8 max-w-lg">
+          <p className="text-lg md:text-xl mb-8 max-w-lg text-white">
             Welkom bij Tandartspraktijk Swaelens in Gent. Wij staan voor persoonlijke tandheelkunde, met aandacht voor detail en een angstvrije ervaring.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
