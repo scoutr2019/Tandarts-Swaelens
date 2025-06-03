@@ -20,11 +20,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0" />
-                <a href="tel:+3292221213" className="hover:text-[#1E90FF]">09 222 12 13</a>
+                <a href="tel:+3292221213" className="hover:text-[#1E90FF] hover:underline">09 222 12 13</a>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0" />
-                <a href="mailto:info@tandartsswaelens.be" className="hover:text-[#1E90FF]">info@tandartsswaelens.be</a>
+                <a href="mailto:info@tandartsswaelens.be" className="hover:text-[#1E90FF] hover:underline">info@tandartsswaelens.be</a>
               </li>
             </ul>
           </div>
@@ -36,15 +36,15 @@ const Footer = () => {
               <div className="flex items-start">
                 <Clock className="h-5 w-5 mr-2 text-[#1E90FF] flex-shrink-0 mt-0.5" />
                 <div className="text-sm">
-                  <div className="mb-2">
-                    <p className="font-semibold text-[#1E90FF]">Open:</p>
-                    <p>Maandag, woensdag & vrijdag</p>
-                    <p>09:00-13:00 & 14:00-18:00</p>
+                  <div className="mb-3">
+                    <p className="font-semibold text-[#1E90FF] mb-1">Open:</p>
+                    <p className="leading-relaxed">Maandag, woensdag & vrijdag</p>
+                    <p className="leading-relaxed">09:00-13:00 & 14:00-18:00</p>
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-600">Gesloten:</p>
-                    <p>Dinsdag, donderdag, zaterdag,</p>
-                    <p>zondag en feestdagen</p>
+                    <p className="font-semibold text-gray-600 mb-1">Gesloten:</p>
+                    <p className="leading-relaxed">Dinsdag, donderdag, zaterdag,</p>
+                    <p className="leading-relaxed">zondag en feestdagen</p>
                   </div>
                 </div>
               </div>

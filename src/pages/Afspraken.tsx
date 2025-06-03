@@ -19,7 +19,7 @@ const Afspraken = () => {
           <AlertTitle className="text-dental-blue-dark dark:text-dental-blue-light font-medium text-lg">Belangrijke informatie</AlertTitle>
           <AlertDescription className="text-gray-700 dark:text-gray-200">
             Op dit moment kunnen alleen <strong>bestaande patiënten</strong> online een afspraak maken. 
-            Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via 09 222 12 13.
+            Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="text-dental-blue-dark dark:text-dental-blue-light hover:underline font-medium">09 222 12 13</a>.
           </AlertDescription>
         </Alert>
         

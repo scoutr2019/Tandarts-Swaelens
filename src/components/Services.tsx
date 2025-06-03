@@ -1,5 +1,5 @@
 
-import { Stethoscope, Check, User, FileText, Calendar, HeartPulse } from "lucide-react";
+import { Stethoscope, Check, User, FileText, Calendar, HeartPulse, Wrench, Shield, Activity } from "lucide-react";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -80,6 +80,48 @@ const Services = () => {
         "Inlays en onlays",
         "Gebruik van CAD/CAM-technologie"
       ]
+    },
+    {
+      id: "implantaten",
+      title: "Implantaten",
+      description: "Tandimplantaten zijn een permanente oplossing voor ontbrekende tanden. Ze zien eruit en functioneren als natuurlijke tanden.",
+      icon: <Wrench className="h-6 w-6" />,
+      details: [
+        "Consultatie en planning met 3D-beeldvorming",
+        "Plaatsing van implantaten",
+        "Kronen op implantaten",
+        "Implantaatgedragen bruggen",
+        "Implantaatgedragen prothesen",
+        "Langdurige oplossing die uw kaakbot gezond houdt"
+      ]
+    },
+    {
+      id: "prothese",
+      title: "Uitneembare prothese",
+      description: "Uitneembare prothesen zijn een oplossing voor patiënten die meerdere of alle tanden missen.",
+      icon: <Shield className="h-6 w-6" />,
+      details: [
+        "Volledige prothesen (kunstgebit)",
+        "Gedeeltelijke prothesen",
+        "Immediaat prothesen (direct na extractie)",
+        "Prothesen op implantaten",
+        "Reparatie en aanpassing van bestaande prothesen",
+        "Comfortabele en natuurlijk uitziende prothesen"
+      ]
+    },
+    {
+      id: "parodontologie",
+      title: "Parodontologie",
+      description: "Parodontologie richt zich op de behandeling van tandvleesaandoeningen en het behoud van gezond tandvlees.",
+      icon: <Activity className="h-6 w-6" />,
+      details: [
+        "Diagnose van tandvleesaandoeningen",
+        "Professionele tandvleesreiniging (scaling en root planing)",
+        "Behandeling van tandvleesontsteking en -infectie",
+        "Chirurgische behandelingen indien nodig",
+        "Onderhoudsprogramma's voor parodontale gezondheid",
+        "Preventie van tandverlies en ondersteuning algehele gezondheid"
+      ]
     }
   ];
 
@@ -88,7 +130,7 @@ const Services = () => {
       <div className="dental-container">
         <h2 className="section-title text-center">Onze diensten</h2>
         <p className="text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-          Bij Tandarts Swaelens bieden we een uitgebreid pakket aan tandheelkundige diensten aan. Van preventieve zorg tot complexe behandelingen, alles met persoonlijke aandacht.
+          We bieden een breed scala aan tandheelkundige behandelingen om uw mondgezondheid te behouden en te verbeteren.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,6 +147,13 @@ const Services = () => {
         </div>
 
         <div className="mt-12 text-center">
+          <h3 className="text-2xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-4">Maak een afspraak</h3>
+          <p className="text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
+            Heeft u vragen over onze diensten of wilt u een afspraak maken? Neem contact met ons op.
+          </p>
+          <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+            Op dit moment kunnen alleen bestaande patiënten online een afspraak maken. Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="text-[#1E90FF] hover:underline font-medium">09 222 12 13</a>.
+          </p>
           <a href="#contact" className="dental-btn-primary inline-flex items-center gap-2">
             <Calendar className="h-5 w-5" />
             <span>Maak een afspraak</span>
