@@ -65,8 +65,8 @@ export default {
 				},
 				dental: {
 					'blue-light': '#EAF6FF',
-					'blue-medium': '#1E90FF',
-					'blue-dark': '#0066CC',
+					'blue-medium': '#19A0D1',
+					'blue-dark': '#19A0D1',
 					'white': '#FFFFFF',
 					'offwhite': '#F8FAFC',
 					'gray-light': '#F1F1F1'

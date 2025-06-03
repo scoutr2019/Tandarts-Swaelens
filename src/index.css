@@ -14,7 +14,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221 83% 41%;
+    --primary: 195 75% 45%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -31,7 +31,7 @@
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221 83% 41%;
+    --ring: 195 75% 45%;
 
     --radius: 0.75rem;
 
@@ -55,7 +55,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
+    --primary: 195 75% 60%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -72,7 +72,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --ring: 195 75% 60%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -94,7 +94,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-dental-blue-dark font-semibold dark:text-dental-blue-light;
+    @apply text-dental-blue-dark font-semibold dark:text-white;
   }
 }
 
@@ -104,11 +104,11 @@
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-6 md:mb-10;
+    @apply text-3xl md:text-4xl font-bold text-dental-blue-dark dark:text-white mb-6 md:mb-10;
   }
 
   .section-subtitle {
-    @apply text-xl md:text-2xl font-medium text-dental-blue-medium mb-4;
+    @apply text-xl md:text-2xl font-medium text-dental-blue-medium dark:text-dental-blue-medium mb-4;
   }
 
   .dental-btn-primary {
@@ -116,6 +116,6 @@
   }
 
   .dental-btn-outline {
-    @apply border-2 border-dental-blue-dark text-dental-blue-dark hover:bg-dental-blue-light dark:border-dental-blue-light dark:text-dental-blue-light dark:hover:bg-dental-blue-dark/30 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
+    @apply border-2 border-dental-blue-dark text-dental-blue-dark hover:bg-dental-blue-light dark:border-dental-blue-medium dark:text-dental-blue-medium dark:hover:bg-dental-blue-dark/30 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors;
   }
 }

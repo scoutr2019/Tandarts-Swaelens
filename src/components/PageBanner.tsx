@@ -17,7 +17,7 @@ const PageBanner = ({ title, description, children }: PageBannerProps) => {
           backgroundImage: "url('/lovable-uploads/fc4781a1-37b7-475e-b988-d6750954400f.png')"
         }}
       >
-        <div className="absolute inset-0 bg-[#1E90FF]/70 dark:bg-[#1E90FF]/80"></div>
+        <div className="absolute inset-0 bg-[#19A0D1]/70 dark:bg-[#19A0D1]/80"></div>
       </div>
 
       {/* Content overlay */}

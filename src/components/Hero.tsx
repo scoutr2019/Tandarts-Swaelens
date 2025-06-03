@@ -12,7 +12,7 @@ const Hero = () => {
           backgroundImage: "url('/lovable-uploads/fc4781a1-37b7-475e-b988-d6750954400f.png')"
         }}
       >
-        <div className="absolute inset-0 bg-[#1E90FF]/70 dark:bg-[#1E90FF]/80"></div>
+        <div className="absolute inset-0 bg-[#19A0D1]/70 dark:bg-[#19A0D1]/80"></div>
       </div>
 
       {/* Content overlay */}
@@ -26,7 +26,7 @@ const Hero = () => {
             Welkom bij Tandartspraktijk Swaelens in Gent. Wij staan voor persoonlijke tandheelkunde, met aandacht voor detail en een angstvrije ervaring.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/afspraken" className="bg-white text-[#1E90FF] hover:bg-gray-100 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+            <Link to="/afspraken" className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
               <Calendar className="h-5 w-5" />
               <span>Maak een afspraak</span>
             </Link>
