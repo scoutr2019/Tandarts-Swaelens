@@ -147,12 +147,12 @@ const Services = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <h3 className="text-2xl font-bold text-dental-blue-dark dark:text-dental-blue-light mb-4">Maak een afspraak</h3>
+          <h3 className="text-2xl font-bold text-dental-blue-dark dark:text-white mb-4">Maak een afspraak</h3>
           <p className="text-gray-700 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
             Heeft u vragen over onze diensten of wilt u een afspraak maken? Neem contact met ons op.
           </p>
           <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            Op dit moment kunnen alleen bestaande patiënten online een afspraak maken. Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="text-[#1E90FF] hover:underline font-medium">09 222 12 13</a>.
+            Op dit moment kunnen alleen bestaande patiënten online een afspraak maken. Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="text-[#19A0D1] hover:underline font-medium">09 222 12 13</a>.
           </p>
           <a href="#contact" className="dental-btn-primary inline-flex items-center gap-2">
             <Calendar className="h-5 w-5" />

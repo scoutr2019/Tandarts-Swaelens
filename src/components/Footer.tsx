@@ -32,17 +32,19 @@ const Footer = () => {
           {/* Column 2: Opening Hours */}
           <div>
             <h3 className="text-lg font-bold mb-4 text-dental-blue-dark dark:text-white">Telefonische Openingsuren</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-start">
-                <Clock className="h-5 w-5 mr-2 text-[#19A0D1] flex-shrink-0 mt-0.5" />
-                <div>
-                  <div className="mb-2">
-                    <p className="font-semibold text-[#19A0D1] mb-1">Open:</p>
+            <div className="flex items-start space-x-3">
+              <Clock className="h-5 w-5 text-[#19A0D1] flex-shrink-0 mt-0.5" />
+              <div className="space-y-3">
+                <div className="bg-white dark:bg-gray-700 p-3 rounded-lg">
+                  <p className="font-semibold text-[#19A0D1] mb-2">Open:</p>
+                  <div className="text-sm space-y-1">
                     <p>Maandag, woensdag & vrijdag</p>
-                    <p>09:00-13:00 & 14:00-18:00</p>
+                    <p className="font-medium">09:00-13:00 & 14:00-18:00</p>
                   </div>
-                  <div>
-                    <p className="font-semibold text-gray-600 dark:text-gray-400 mb-1">Gesloten:</p>
+                </div>
+                <div className="bg-gray-100 dark:bg-gray-600 p-3 rounded-lg">
+                  <p className="font-semibold text-gray-600 dark:text-gray-300 mb-2">Gesloten:</p>
+                  <div className="text-sm">
                     <p>Dinsdag, donderdag, zaterdag,</p>
                     <p>zondag en feestdagen</p>
                   </div>
@@ -76,9 +78,14 @@ const Footer = () => {
         
         <Separator className="my-8 bg-gray-200 dark:bg-gray-600" />
         
-        <p className="text-sm text-center">
-          © {currentYear} Tandarts Swaelens. Alle rechten voorbehouden.
-        </p>
+        <div className="text-center space-y-2">
+          <p className="text-sm">
+            © {currentYear} Tandarts Swaelens. Alle rechten voorbehouden.
+          </p>
+          <p className="text-sm">
+            Met liefde gemaakt door <a href="https://www.thuisit.be" target="_blank" rel="noopener noreferrer" className="hover:text-[#19A0D1] hover:underline">ThuisIT.be</a>
+          </p>
+        </div>
       </div>
     </footer>
   );
