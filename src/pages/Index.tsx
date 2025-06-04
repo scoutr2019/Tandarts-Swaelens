@@ -1,7 +1,7 @@
 
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { Users, Calendar, Stethoscope, Check, HeartPulse } from "lucide-react";
+import { Users, Calendar, Stethoscope, Check, HeartPulse, Heart, Shield, Smile } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 
@@ -40,6 +40,24 @@ const Index = () => {
       role: "Tandartsassistente",
       description: "Anneleen zorgt voor het comfort van onze patiënten en ondersteunt bij alle behandelingen. Ze staat bekend om haar vriendelijke benadering en haar talent om zelfs de meest nerveuze patiënten gerust te stellen.",
       image: "/lovable-uploads/347a82c7-f3a8-4776-a337-66d18e3aa519.png"
+    }
+  ];
+
+  const philosophyItems = [
+    {
+      title: "Persoonlijke aandacht",
+      description: "We nemen de tijd om naar uw wensen en zorgen te luisteren en stellen een behandelplan op maat voor u samen.",
+      icon: <Heart className="h-6 w-6" />
+    },
+    {
+      title: "Moderne technieken",
+      description: "Onze praktijk is uitgerust met de nieuwste technologieën om u de beste en meest comfortabele behandelingen te bieden.",
+      icon: <Shield className="h-6 w-6" />
+    },
+    {
+      title: "Angstvrije ervaring",
+      description: "We begrijpen dat tandartsbezoeken stressvol kunnen zijn en doen er alles aan om u op uw gemak te stellen.",
+      icon: <Smile className="h-6 w-6" />
     }
   ];
 
@@ -112,7 +130,6 @@ const Index = () => {
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="dental-container">
           <div className="text-center mb-12">
-            <p className="text-[#19A0D1] font-medium mb-2">Wie wij zijn</p>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Ons Team</h2>
             <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Maak kennis met ons ervaren en vriendelijke team dat klaarstaat om u de beste tandheelkundige zorg te bieden.
@@ -146,6 +163,52 @@ const Index = () => {
               <span>Leer meer over ons team</span>
               <span>→</span>
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Philosophy Section */}
+      <section className="py-16">
+        <div className="dental-container">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#19A0D1]">Tandheelkunde met een persoonlijke touch</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
+              Bij Tandarts Swaelens combineren we vakmanschap met zorg en aandacht voor elke patiënt.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
+            {philosophyItems.map((item, index) => (
+              <div key={index} className="text-center">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#19A0D1] text-white rounded-full mb-6">
+                  {item.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">{item.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-[#19A0D1] text-white rounded-xl p-8 text-center">
+            <h3 className="text-2xl font-semibold mb-4">Klaar om een afspraak te maken?</h3>
+            <p className="mb-6 text-lg">
+              Bent u een bestaande patiënt? Maak eenvoudig online een afspraak op een moment dat u het beste uitkomt.
+            </p>
+            <p className="mb-6">
+              Nieuwe patiënten kunnen telefonisch contact opnemen via <a href="tel:+3292221213" className="font-semibold underline">09 222 12 13</a> om een eerste afspraak te maken.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="bg-white/10 rounded-lg p-4 text-sm">
+                <p className="font-semibold mb-1">Telefonische Openingsuren:</p>
+                <p>Maandag, woensdag & vrijdag: 09:00-13:00 & 14:00-18:00</p>
+              </div>
+              <Link 
+                to="/afspraken"
+                className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors"
+              >
+                Maak een afspraak →
+              </Link>
+            </div>
           </div>
         </div>
       </section>
