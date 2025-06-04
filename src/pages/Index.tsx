@@ -3,9 +3,6 @@ import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
 import { Users, Calendar, Stethoscope, Check, HeartPulse } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
-import Services from "@/components/Services";
-import TeamSection from "@/components/Team";
-import ContactSection from "@/components/Contact";
 import Hero from "@/components/Hero";
 
 const Index = () => {
@@ -93,9 +90,6 @@ const Index = () => {
               </Link>
             </div>
           </div>
-
-          <TeamSection />
-          <ContactSection />
         </div>
       </section>
     </Layout>
