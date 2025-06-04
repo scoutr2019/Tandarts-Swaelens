@@ -28,6 +28,21 @@ const Index = () => {
     }
   ];
 
+  const teamMembers = [
+    {
+      name: "Dr. Christian Swaelens",
+      role: "Tandarts",
+      description: "Dr. Swaelens heeft jarenlange ervaring in de tandheelkunde en staat bekend om zijn persoonlijke aanpak en aandacht voor detail. Met zijn vriendelijke benadering zorgt hij ervoor dat elke patiënt zich op zijn gemak voelt.",
+      image: "/lovable-uploads/42ab460c-7716-40d6-8ccc-b35dd0215c9f.png"
+    },
+    {
+      name: "Anneleen Moonens",
+      role: "Tandartsassistente",
+      description: "Anneleen zorgt voor het comfort van onze patiënten en ondersteunt bij alle behandelingen. Ze staat bekend om haar vriendelijke benadering en haar talent om zelfs de meest nerveuze patiënten gerust te stellen.",
+      image: "/lovable-uploads/347a82c7-f3a8-4776-a337-66d18e3aa519.png"
+    }
+  ];
+
   return (
     <Layout>
       {/* Banner Section */}
@@ -89,6 +104,48 @@ const Index = () => {
                 <span>Bekijk alle diensten</span>
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Team Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="dental-container">
+          <div className="text-center mb-12">
+            <p className="text-[#19A0D1] font-medium mb-2">Wie wij zijn</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Ons Team</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+              Maak kennis met ons ervaren en vriendelijke team dat klaarstaat om u de beste tandheelkundige zorg te bieden.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">{member.name}</h3>
+                  <p className="text-[#19A0D1] font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{member.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="text-center">
+            <Link 
+              to="/team" 
+              className="text-[#19A0D1] hover:text-[#19A0D1]/80 font-medium inline-flex items-center gap-2 border-b border-[#19A0D1] pb-1 transition-colors"
+            >
+              <span>Leer meer over ons team</span>
+              <span>→</span>
+            </Link>
           </div>
         </div>
       </section>
