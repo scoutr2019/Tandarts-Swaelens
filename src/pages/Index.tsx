@@ -1,7 +1,7 @@
 
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { Users, Calendar, Stethoscope, Check, HeartPulse, Heart, Shield, Smile } from "lucide-react";
+import { Users, Calendar, Stethoscope, Check, HeartPulse, Heart, Shield, Smile, Phone, Clock } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 
@@ -189,25 +189,69 @@ const Index = () => {
             ))}
           </div>
 
-          <div className="bg-[#19A0D1] text-white rounded-xl p-8 text-center">
-            <h3 className="text-2xl font-semibold mb-4">Klaar om een afspraak te maken?</h3>
-            <p className="mb-6 text-lg">
-              Bent u een bestaande patiënt? Maak eenvoudig online een afspraak op een moment dat u het beste uitkomt.
-            </p>
-            <p className="mb-6">
-              Nieuwe patiënten kunnen telefonisch contact opnemen via <a href="tel:+3292221213" className="font-semibold underline">09 222 12 13</a> om een eerste afspraak te maken.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <div className="bg-white/10 rounded-lg p-4 text-sm">
-                <p className="font-semibold mb-1">Telefonische Openingsuren:</p>
-                <p>Maandag, woensdag & vrijdag: 09:00-13:00 & 14:00-18:00</p>
+          {/* Redesigned CTA Section */}
+          <div className="relative overflow-hidden bg-gradient-to-br from-[#19A0D1] via-[#1E90FF] to-[#4FC3F7] rounded-2xl shadow-2xl">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute top-0 left-0 w-40 h-40 bg-white rounded-full -translate-x-20 -translate-y-20"></div>
+              <div className="absolute bottom-0 right-0 w-60 h-60 bg-white rounded-full translate-x-20 translate-y-20"></div>
+              <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-white rounded-full -translate-x-16 -translate-y-16"></div>
+            </div>
+            
+            <div className="relative p-8 md:p-12 text-center text-white">
+              <div className="max-w-4xl mx-auto">
+                <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-6 backdrop-blur-sm">
+                  <Calendar className="h-10 w-10 text-white" />
+                </div>
+                
+                <h3 className="text-3xl md:text-4xl font-bold mb-6">Klaar om een afspraak te maken?</h3>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mx-auto mb-4">
+                      <Users className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="text-xl font-semibold mb-3">Bestaande patiënten</h4>
+                    <p className="text-white/90 mb-4 leading-relaxed">
+                      Maak eenvoudig online een afspraak op een moment dat u het beste uitkomt.
+                    </p>
+                    <Link 
+                      to="/afspraken"
+                      className="inline-flex items-center gap-2 bg-white text-[#19A0D1] hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                    >
+                      <Calendar className="h-5 w-5" />
+                      <span>Maak een afspraak</span>
+                    </Link>
+                  </div>
+                  
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="flex items-center justify-center w-12 h-12 bg-white/20 rounded-full mx-auto mb-4">
+                      <Phone className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="text-xl font-semibold mb-3">Nieuwe patiënten</h4>
+                    <p className="text-white/90 mb-4 leading-relaxed">
+                      Neem telefonisch contact op om een eerste afspraak te maken.
+                    </p>
+                    <a 
+                      href="tel:+3292221213" 
+                      className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border border-white/30"
+                    >
+                      <Phone className="h-5 w-5" />
+                      <span>09 222 12 13</span>
+                    </a>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 max-w-2xl mx-auto">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <Clock className="h-6 w-6 text-white" />
+                    <h4 className="text-lg font-semibold">Telefonische Openingsuren</h4>
+                  </div>
+                  <p className="text-white/90 text-lg">
+                    Maandag, woensdag & vrijdag: <span className="font-semibold">09:00-13:00 & 14:00-18:00</span>
+                  </p>
+                </div>
               </div>
-              <Link 
-                to="/afspraken"
-                className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-3 px-8 rounded-lg transition-colors"
-              >
-                Maak een afspraak →
-              </Link>
             </div>
           </div>
         </div>
