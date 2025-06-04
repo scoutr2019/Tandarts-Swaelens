@@ -43,57 +43,65 @@ const Team = () => {
   ];
 
   return (
-    <section id="team" className="py-16 bg-gray-900 text-white">
-      <div className="dental-container">
-        <h2 className="section-title text-center text-white">Ons team</h2>
-        <p className="text-center text-gray-300 max-w-3xl mx-auto mb-12">
-          Maak kennis met ons deskundige team dat klaarstaat om u de beste tandheelkundige zorg te bieden in een comfortabele omgeving.
-        </p>
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16">
-          {team.map((member, index) => (
-            <div key={index} className="flex flex-col lg:flex-row gap-6 items-start">
-              <div className="w-full lg:w-80 h-80 overflow-hidden rounded-xl flex-shrink-0">
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-full h-full object-cover object-top"
-                />
-              </div>
-              <div className="flex-1">
-                <h3 className="text-2xl font-semibold text-white mb-2">{member.name}</h3>
-                <p className="text-[#19A0D1] text-lg mb-4">{member.role}</p>
-                <div className="space-y-3 text-gray-300">
-                  {member.bio.map((paragraph, i) => (
-                    <p key={i} className="leading-relaxed">{paragraph}</p>
-                  ))}
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Team Members Section */}
+      <section className="py-16">
+        <div className="dental-container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Ons team</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-16">
+            Maak kennis met ons deskundige team dat klaarstaat om u de beste tandheelkundige zorg te bieden in een comfortabele omgeving.
+          </p>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
+            {team.map((member, index) => (
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <div className="h-80 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div className="p-8">
+                  <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-2">{member.name}</h3>
+                  <p className="text-[#19A0D1] text-lg font-medium mb-6">{member.role}</p>
+                  <div className="space-y-4 text-gray-700 dark:text-gray-300">
+                    {member.bio.map((paragraph, i) => (
+                      <p key={i} className="leading-relaxed">{paragraph}</p>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Philosophy Section */}
-        <div className="border-t border-gray-700 pt-16">
-          <h2 className="text-3xl font-bold text-center text-white mb-4">Onze Filosofie</h2>
-          <p className="text-center text-gray-300 max-w-3xl mx-auto mb-12">
+      {/* Philosophy Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-800">
+        <div className="dental-container">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">Onze Filosofie</h2>
+          <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-16">
             Bij Tandarts Swaelens geloven we in een patiëntgerichte benadering van tandheelkunde. 
             Onze filosofie is gebaseerd op de volgende principes:
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {philosophy.map((item, index) => (
-              <div key={index} className="bg-gray-800 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-[#19A0D1] mb-3">{item.title}</h3>
-                <p className="text-gray-300 leading-relaxed">{item.description}</p>
+              <div key={index} className="bg-white dark:bg-gray-700 rounded-xl p-8 shadow-md">
+                <h3 className="text-xl font-semibold text-[#19A0D1] mb-4">{item.title}</h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
         </div>
+      </section>
 
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-semibold text-white mb-4">Maak kennis met ons team</h3>
-          <p className="text-gray-300 mb-8">
+      {/* CTA Section */}
+      <section className="py-16">
+        <div className="dental-container text-center">
+          <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Maak kennis met ons team</h3>
+          <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Wilt u een afspraak maken met Dr. Swaelens of heeft u vragen? 
             Neem contact met ons op.
           </p>
@@ -104,8 +112,8 @@ const Team = () => {
             Maak een afspraak
           </a>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

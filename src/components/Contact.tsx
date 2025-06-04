@@ -20,7 +20,7 @@ const Contact = () => {
                   <h4 className="font-medium text-dental-blue-dark">Adres</h4>
                   <p className="text-gray-700">
                     <a 
-                      href="https://www.google.com/maps/search/?api=1&query=Kortrijksesteenweg+215+9000+Gent" 
+                      href="https://www.google.com/maps/place/Tandartsenpraktijk+Swaelens+C./@51.0392519,3.7117256,16z/data=!3m1!4b1!4m6!3m5!1s0x47c3715efd8f497b:0x7fefdc6320099989!8m2!3d51.039252!4d3.7165965!16s%2Fg%2F1tfj_051?hl=en&entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="hover:text-dental-blue-medium transition-colors"
@@ -64,33 +64,31 @@ const Contact = () => {
                   <Clock className="h-6 w-6" />
                 </div>
                 <div className="w-full">
-                  <h4 className="font-medium text-dental-blue-dark mb-3">Openingsuren</h4>
-                  <div className="bg-gray-50 rounded-lg p-4">
-                    <div className="grid grid-cols-1 gap-3">
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">Maandag</span>
-                        <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
-                      </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">Dinsdag</span>
-                        <span className="text-gray-500">Gesloten</span>
-                      </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">Woensdag</span>
-                        <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
-                      </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">Donderdag</span>
-                        <span className="text-gray-500">Gesloten</span>
-                      </div>
-                      <div className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                        <span className="font-medium text-gray-700">Vrijdag</span>
-                        <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
-                      </div>
-                      <div className="flex justify-between items-center py-2">
-                        <span className="font-medium text-gray-700">Zaterdag/Zondag</span>
-                        <span className="text-gray-500">Gesloten</span>
-                      </div>
+                  <h4 className="font-medium text-dental-blue-dark mb-4">Openingsuren</h4>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-center pb-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">Maandag:</span>
+                      <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">Dinsdag:</span>
+                      <span className="text-gray-500">Gesloten</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">Woensdag:</span>
+                      <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">Donderdag:</span>
+                      <span className="text-gray-500">Gesloten</span>
+                    </div>
+                    <div className="flex justify-between items-center pb-2 border-b border-gray-100">
+                      <span className="font-medium text-gray-700">Vrijdag:</span>
+                      <span className="text-dental-blue-dark font-medium">09:00–13:00, 14:00–18:00</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="font-medium text-gray-700">Zaterdag/Zondag:</span>
+                      <span className="text-gray-500">Gesloten</span>
                     </div>
                   </div>
                 </div>
@@ -136,7 +134,7 @@ const Contact = () => {
             
             <div className="mt-8 rounded-lg overflow-hidden h-[300px]">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.101921862502!2d3.7149684763422605!3d51.034883471723666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3717b5d9d8755%3A0x5bd4d5b8fc6b4fcb!2sKortrijksesteenweg%20215%2C%209000%20Gent%2C%20Belgium!5e0!3m2!1sen!2sus!4v1715805659911!5m2!1sen!2sus" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.097755!3d51.039252!4d3.7165965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3715efd8f497b%3A0x7fefdc6320099989!2sTandartsenpraktijk%20Swaelens%20C.!5e0!3m2!1sen!2sbe!4v1640995200000!5m2!1sen!2sbe" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0 }} 
