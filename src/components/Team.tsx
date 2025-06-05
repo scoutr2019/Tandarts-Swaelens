@@ -1,4 +1,3 @@
-
 const Team = () => {
   const team = [
     {
@@ -123,7 +122,6 @@ const Team = () => {
             Maak een afspraak
           </a>
         </div>
-      </div>
       </section>
     </div>
   );
