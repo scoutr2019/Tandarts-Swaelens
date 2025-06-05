@@ -1,3 +1,4 @@
+
 const Team = () => {
   const team = [
     {
@@ -42,7 +43,24 @@ const Team = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-dental-offwhite to-white dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-b from-dental-offwhite to-white dark:from-gray-900 dark:to-gray-800 relative overflow-hidden">
+      {/* Subtle background elements */}
+      <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.05]">
+        <div className="absolute top-20 left-[10%] text-6xl text-dental-blue-medium">🦷</div>
+        <div className="absolute top-40 right-[15%] text-4xl text-dental-blue-medium">✨</div>
+        <div className="absolute top-80 left-[20%] text-5xl text-dental-blue-medium">😊</div>
+        <div className="absolute bottom-80 right-[25%] text-6xl text-dental-blue-medium">🦷</div>
+        <div className="absolute bottom-40 left-[15%] text-4xl text-dental-blue-medium">💎</div>
+        <div className="absolute top-60 right-[40%] text-3xl text-dental-blue-medium">⭐</div>
+        <div className="absolute bottom-60 left-[45%] text-5xl text-dental-blue-medium">🌟</div>
+      </div>
+
+      {/* Subtle geometric patterns */}
+      <div className="absolute top-32 right-20 w-24 h-24 border border-dental-blue-light/20 rounded-full"></div>
+      <div className="absolute bottom-32 left-16 w-32 h-32 border-2 border-dental-blue-light/15 rounded-lg rotate-45"></div>
+      <div className="absolute top-1/2 left-10 w-16 h-16 bg-dental-blue-light/10 rounded-full"></div>
+      <div className="absolute top-1/4 right-32 w-20 h-20 bg-gradient-to-br from-dental-blue-light/10 to-transparent rounded-full"></div>
+
       {/* Team Members Section */}
       <section className="py-16 relative">
         {/* Subtle decorative elements */}
@@ -57,7 +75,9 @@ const Team = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
             {team.map((member, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100 dark:border-gray-700">
+              <div key={index} className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 border border-gray-100/50 dark:border-gray-700/50 relative">
+                {/* Subtle card background pattern */}
+                <div className="absolute top-4 right-4 text-dental-blue-light/30 text-2xl">🦷</div>
                 <div className="h-80 overflow-hidden">
                   <img 
                     src={member.image} 
@@ -81,7 +101,15 @@ const Team = () => {
       </section>
 
       {/* Philosophy Section */}
-      <section className="py-16 bg-gradient-to-r from-gray-50 via-dental-blue-light/20 to-gray-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 relative overflow-hidden">
+      <section className="py-16 bg-gradient-to-r from-gray-50/80 via-dental-blue-light/20 to-gray-50/80 dark:from-gray-800/80 dark:via-gray-700/80 dark:to-gray-800/80 relative overflow-hidden backdrop-blur-sm">
+        {/* Enhanced pattern overlay */}
+        <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.08]">
+          <div className="absolute top-16 left-[15%] text-8xl text-dental-blue-medium">🦷</div>
+          <div className="absolute bottom-16 right-[15%] text-6xl text-dental-blue-medium">✨</div>
+          <div className="absolute top-1/2 left-[5%] text-4xl text-dental-blue-medium">💎</div>
+          <div className="absolute top-1/3 right-[8%] text-5xl text-dental-blue-medium">🌟</div>
+        </div>
+        
         {/* Subtle pattern overlay */}
         <div className="absolute inset-0 opacity-5 dark:opacity-10"
              style={{
@@ -98,7 +126,14 @@ const Team = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {philosophy.map((item, index) => (
-              <div key={index} className="bg-white/80 dark:bg-gray-700/80 backdrop-blur-sm rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-white/50 dark:border-gray-600/50">
+              <div key={index} className="bg-white/90 dark:bg-gray-700/90 backdrop-blur-sm rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 border border-white/70 dark:border-gray-600/70 relative">
+                {/* Subtle card icons */}
+                <div className="absolute top-4 right-4 text-dental-blue-light/40 text-xl">
+                  {index === 0 && '🛡️'}
+                  {index === 1 && '👥'}
+                  {index === 2 && '📚'}
+                  {index === 3 && '😌'}
+                </div>
                 <h3 className="text-xl font-semibold text-[#19A0D1] mb-4">{item.title}</h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{item.description}</p>
               </div>
@@ -108,8 +143,12 @@ const Team = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-gradient-to-b from-white to-dental-offwhite dark:from-gray-800 dark:to-gray-900">
-        <div className="dental-container text-center">
+      <section className="py-16 bg-gradient-to-b from-white/90 to-dental-offwhite/90 dark:from-gray-800/90 dark:to-gray-900/90 backdrop-blur-sm relative">
+        {/* Subtle background elements for CTA */}
+        <div className="absolute top-8 left-[20%] text-dental-blue-light/20 text-3xl">📞</div>
+        <div className="absolute bottom-8 right-[20%] text-dental-blue-light/20 text-3xl">📅</div>
+        
+        <div className="dental-container text-center relative">
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">Maak kennis met ons team</h3>
           <p className="text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
             Wilt u een afspraak maken met Dr. Swaelens of heeft u vragen? 
