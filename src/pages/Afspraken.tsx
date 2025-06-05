@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import PageBanner from "@/components/PageBanner";
 import { Phone, Mail, Calendar } from "lucide-react";
@@ -24,7 +23,7 @@ const Afspraken = () => {
               <div className="ml-3">
                 <h3 className="text-lg font-medium text-[#19A0D1] mb-2">Belangrijk voor nieuwe patiënten</h3>
                 <p className="text-gray-700">
-                  Op dit moment kunnen alleen bestaande patiënten online een afspraak maken. Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="font-medium text-[#19A0D1] hover:underline">09 222 12 13</a>.
+                  Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="font-medium text-[#19A0D1] hover:underline">09 222 12 13</a>.
                 </p>
               </div>
             </div>
@@ -51,10 +50,14 @@ const Afspraken = () => {
             <div className="bg-white dark:bg-gray-800 rounded-xl shadow-md p-8">
               <h2 className="text-2xl font-semibold mb-6 text-[#19A0D1]">Bestaande patiënten</h2>
               <p className="text-gray-700 dark:text-gray-300 mb-6">
-                Als bestaande patiënt kunt u op verschillende manieren een afspraak maken. Kies de methode die voor u het meest geschikt is.
+                Als bestaande patiënt kunt u online een afspraak maken via het onderstaande formulier. Lukt dit niet? Dan kunt u ook telefonisch of per e-mail contact met ons opnemen.
               </p>
               <div className="space-y-4">
-                <a href="tel:+3292221213" className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 w-full">
+                <a href="#online-afspraak" className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 w-full">
+                  <Calendar className="h-5 w-5" />
+                  <span>Maak online een afspraak</span>
+                </a>
+                <a href="tel:+3292221213" className="border-2 border-[#19A0D1] text-[#19A0D1] hover:bg-[#19A0D1]/10 font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2 w-full">
                   <Phone className="h-5 w-5" />
                   <span>Bel voor een afspraak</span>
                 </a>
@@ -66,6 +69,38 @@ const Afspraken = () => {
             </div>
           </div>
 
+          {/* Online Appointment Section for Existing Patients */}
+          <div id="online-afspraak" className="mt-12 bg-white dark:bg-gray-800 rounded-xl shadow-md p-8">
+            <h2 className="text-2xl font-semibold mb-6 text-center text-[#19A0D1]">Online afspraak maken</h2>
+            <p className="text-center text-gray-700 dark:text-gray-300 mb-8">
+              Bestaande patiënten kunnen hier direct online een afspraak inplannen. Selecteer een beschikbare datum en tijd die u uitkomt.
+            </p>
+            
+            <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4 mb-6">
+              <div className="rounded-lg overflow-hidden" style={{ height: '600px' }}>
+                <iframe 
+                  src="https://tandartsswaelens.setmore.com/"
+                  width="100%" 
+                  height="100%" 
+                  style={{ border: 0 }} 
+                  allowFullScreen={true}
+                  loading="lazy"
+                  title="Online afspraak maken - Tandarts Swaelens"
+                ></iframe>
+              </div>
+            </div>
+            
+            <div className="text-center text-sm text-gray-600 dark:text-gray-400">
+              <p className="mb-2">Heeft u problemen met het online systeem?</p>
+              <div className="flex justify-center gap-4 flex-wrap">
+                <a href="tel:+3292221213" className="text-[#19A0D1] hover:underline">Bel ons: 09 222 12 13</a>
+                <span>•</span>
+                <a href="mailto:info@tandartsswaelens.be" className="text-[#19A0D1] hover:underline">E-mail: info@tandartsswaelens.be</a>
+              </div>
+            </div>
+          </div>
+
+          {/* ... keep existing code (opening hours section) */}
           <div className="mt-12 bg-gray-50 dark:bg-gray-700 rounded-xl p-8">
             <h2 className="text-2xl font-semibold mb-6 text-center">Openingsuren voor afspraken</h2>
             <div className="max-w-2xl mx-auto">
