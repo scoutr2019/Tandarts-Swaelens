@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Separator } from "./ui/separator";
@@ -16,7 +15,14 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-[#19A0D1] flex-shrink-0 mt-0.5" />
-                <span>Kortrijksesteenweg 215, 9000 Gent</span>
+                <a 
+                  href="https://www.google.com/maps/place/Tandartsenpraktijk+Swaelens+C./@51.0392519,3.7117256,16z/data=!3m1!4b1!4m6!3m5!1s0x47c3715efd8f497b:0x7fefdc6320099989!8m2!3d51.039252!4d3.7165965!16s%2Fg%2F1tfj_051?hl=en&entry=ttu&g_ep=EgoyMDI1MDUyOC4wIKXMDSoASAFQAw%3D%3D" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-[#19A0D1] hover:underline"
+                >
+                  Kortrijksesteenweg 215, 9000 Gent
+                </a>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-[#19A0D1] flex-shrink-0" />
