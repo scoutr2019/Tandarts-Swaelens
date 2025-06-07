@@ -1,5 +1,6 @@
 
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   return (
@@ -29,10 +30,10 @@ const Contact = () => {
       <div className="dental-container relative z-10">
         <h2 className="section-title text-center">Contact & afspraken</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12">
-          {/* Contact Information */}
+        {/* Contact Information - Centered at the top */}
+        <div className="max-w-2xl mx-auto mb-12">
           <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 p-6 md:p-8">
-            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-dental-blue-dark dark:text-white">Contactgegevens</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-6 text-dental-blue-dark dark:text-white text-center">Contactgegevens</h3>
             
             <div className="space-y-4">
               <div className="flex items-start gap-4">
@@ -105,27 +106,18 @@ const Contact = () => {
                 <Phone className="h-5 w-5" />
                 <span>Bel voor een afspraak</span>
               </a>
-              <a href="mailto:info@tandartsswaelens.be" className="dental-btn-outline flex items-center justify-center gap-2">
+              <Link to="/afspraken" className="dental-btn-outline flex items-center justify-center gap-2">
                 <Mail className="h-5 w-5" />
-                <span>Stuur ons een e-mail</span>
-              </a>
-            </div>
-            
-            <div className="mt-8 rounded-lg overflow-hidden h-[300px]">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.097755!3d51.039252!4d3.7165965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3715efd8f497b%3A0x7fefdc6320099989!2sTandartsenpraktijk%20Swaelens%20C.!5e0!3m2!1sen!2sbe!4v1640995200000!5m2!1sen!2sbe" 
-                width="100%" 
-                height="100%" 
-                style={{ border: 0 }} 
-                allowFullScreen={true} 
-                loading="lazy" 
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
+                <span>Online afspraak maken</span>
+              </Link>
             </div>
           </div>
+        </div>
 
+        {/* Opening Hours and FAQ side by side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Opening Hours */}
-          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 p-6 md:p-8">
+          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 p-6 md:p-8 h-fit">
             <div className="flex items-center gap-3 mb-6">
               <div className="p-3 bg-dental-blue-light dark:bg-dental-blue-dark/30 rounded-lg text-dental-blue-dark dark:text-dental-blue-light">
                 <Clock className="h-6 w-6" />
@@ -162,7 +154,7 @@ const Contact = () => {
           </div>
 
           {/* FAQ Section */}
-          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 p-6 md:p-8">
+          <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-xl shadow-lg border border-white/50 dark:border-gray-700/50 p-6 md:p-8 h-fit">
             <h3 className="text-xl md:text-2xl font-semibold mb-6 text-dental-blue-dark dark:text-white">Meest gestelde vragen</h3>
             
             <div className="space-y-6">
@@ -194,6 +186,21 @@ const Contact = () => {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Map */}
+        <div className="mt-12">
+          <div className="rounded-lg overflow-hidden h-[300px] md:h-[400px]">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2508.097755!3d51.039252!4d3.7165965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3715efd8f497b%3A0x7fefdc6320099989!2sTandartsenpraktijk%20Swaelens%20C.!5e0!3m2!1sen!2sbe!4v1640995200000!5m2!1sen!2sbe" 
+              width="100%" 
+              height="100%" 
+              style={{ border: 0 }} 
+              allowFullScreen={true} 
+              loading="lazy" 
+              referrerPolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
         </div>
       </div>
