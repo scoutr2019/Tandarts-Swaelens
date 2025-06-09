@@ -68,16 +68,44 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div 
-        className={`md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md transition-transform duration-300 transform ${
-          isMobileMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        className={`md:hidden absolute top-full left-0 w-full bg-white dark:bg-gray-900 shadow-md transition-all duration-300 transform ${
+          isMobileMenuOpen ? 'translate-y-0 opacity-100 visible' : '-translate-y-full opacity-0 invisible'
         }`}
       >
         <nav className="dental-container py-4 flex flex-col gap-4">
-          <Link to="/" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}>Home</Link>
-          <Link to="/diensten" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}>Diensten</Link>
-          <Link to="/team" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}>Team</Link>
-          <Link to="/contact" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}>Contact</Link>
-          <Link to="/afspraken" className="dental-btn-primary flex items-center justify-center gap-2 mt-2">
+          <Link 
+            to="/" 
+            className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/diensten" 
+            className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Diensten
+          </Link>
+          <Link 
+            to="/team" 
+            className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Team
+          </Link>
+          <Link 
+            to="/contact" 
+            className={`font-medium text-dental-blue-dark dark:text-dental-blue-light py-2 border-b border-dental-blue-light dark:border-gray-700 ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            Contact
+          </Link>
+          <Link 
+            to="/afspraken" 
+            className="dental-btn-primary flex items-center justify-center gap-2 mt-2"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
             <Calendar className="h-4 w-4" />
             <span>Maak een afspraak</span>
           </Link>
