@@ -1,5 +1,6 @@
 
 import { Stethoscope, Check, User, FileText, Calendar, HeartPulse, Wrench, Shield, Activity } from "lucide-react";
+import { Link } from "react-router-dom";
 import ServiceCard from "./ServiceCard";
 
 const Services = () => {
@@ -154,10 +155,10 @@ const Services = () => {
           <p className="text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
             Op dit moment kunnen alleen bestaande patiënten online een afspraak maken. Bent u nog geen patiënt? Neem dan telefonisch contact met ons op via <a href="tel:+3292221213" className="text-[#19A0D1] hover:underline font-medium">09 222 12 13</a>.
           </p>
-          <a href="#contact" className="dental-btn-primary inline-flex items-center gap-2">
+          <Link to="/afspraken" className="dental-btn-primary inline-flex items-center gap-2">
             <Calendar className="h-5 w-5" />
             <span>Maak een afspraak</span>
-          </a>
+          </Link>
         </div>
       </div>
     </section>
