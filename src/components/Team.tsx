@@ -1,4 +1,6 @@
 
+import { Link } from "react-router-dom";
+
 const Team = () => {
   const team = [
     {
@@ -154,12 +156,12 @@ const Team = () => {
             Wilt u een afspraak maken met Dr. Swaelens of heeft u vragen? 
             Neem contact met ons op.
           </p>
-          <a 
-            href="tel:+3292221213" 
+          <Link 
+            to="/afspraken" 
             className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 inline-block hover:scale-105 shadow-lg"
           >
             Maak een afspraak
-          </a>
+          </Link>
         </div>
       </section>
     </div>
