@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Separator } from "./ui/separator";
@@ -88,9 +89,17 @@ const Footer = () => {
           <p className="text-sm">
             © {currentYear} Tandarts Swaelens. Alle rechten voorbehouden.
           </p>
-          <p className="text-sm">
-            Met liefde gemaakt door <a href="https://www.thuisit.be" target="_blank" rel="noopener noreferrer" className="hover:text-[#19A0D1] hover:underline">ThuisIT.be</a>
-          </p>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 text-sm">
+            <p>
+              Met liefde gemaakt door <a href="https://www.thuisit.be" target="_blank" rel="noopener noreferrer" className="hover:text-[#19A0D1] hover:underline">ThuisIT.be</a>
+            </p>
+            <span className="hidden sm:inline">•</span>
+            <div className="flex gap-4">
+              <Link to="/privacy" className="hover:text-[#19A0D1] hover:underline">Privacybeleid</Link>
+              <span>•</span>
+              <Link to="/cookies" className="hover:text-[#19A0D1] hover:underline">Cookiebeleid</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
