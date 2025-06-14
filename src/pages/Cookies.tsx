@@ -81,10 +81,10 @@ const Cookies = () => {
           <h3 className="text-xl font-semibold text-dental-blue mt-6 mb-3">Via uw browser</h3>
           <p>U kunt ook uw browserinstellingen aanpassen om cookies te beheren:</p>
           <ul className="list-disc ml-6 mb-6 space-y-2">
-            <li><strong>Chrome:</strong> Instellingen > Privacy en beveiliging > Cookies en andere sitegegevens</li>
-            <li><strong>Firefox:</strong> Instellingen > Privacy en beveiliging > Cookies en sitegegevens</li>
-            <li><strong>Safari:</strong> Voorkeuren > Privacy > Cookies en websitegegevens</li>
-            <li><strong>Edge:</strong> Instellingen > Cookies en sitemachtigingen</li>
+            <li><strong>Chrome:</strong> Instellingen {'>'}  Privacy en beveiliging {'>'}  Cookies en andere sitegegevens</li>
+            <li><strong>Firefox:</strong> Instellingen {'>'}  Privacy en beveiliging {'>'}  Cookies en sitegegevens</li>
+            <li><strong>Safari:</strong> Voorkeuren {'>'}  Privacy {'>'}  Cookies en websitegegevens</li>
+            <li><strong>Edge:</strong> Instellingen {'>'}  Cookies en sitemachtigingen</li>
           </ul>
 
           <h2 className="text-2xl font-semibold text-dental-blue-dark mt-8 mb-4">Gevolgen van cookies uitschakelen</h2>
