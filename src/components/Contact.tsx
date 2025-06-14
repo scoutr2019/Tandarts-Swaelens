@@ -138,8 +138,12 @@ const Contact = () => {
                 <span className="font-medium text-gray-700 dark:text-gray-300">Vrijdag</span>
                 <span className="text-dental-blue-dark dark:text-dental-blue-light font-semibold text-sm">09:00-13:00<br/>14:00-18:00</span>
               </div>
-              <div className="flex justify-between items-center py-3">
+              <div className="flex justify-between items-center py-3 border-b border-gray-100 dark:border-gray-600">
                 <span className="font-medium text-gray-700 dark:text-gray-300">Weekend</span>
+                <span className="text-gray-400 dark:text-gray-500">Gesloten</span>
+              </div>
+              <div className="flex justify-between items-center py-3">
+                <span className="font-medium text-gray-700 dark:text-gray-300">Feestdagen</span>
                 <span className="text-gray-400 dark:text-gray-500">Gesloten</span>
               </div>
             </div>
