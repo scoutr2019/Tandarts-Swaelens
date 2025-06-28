@@ -1,11 +1,13 @@
+
 import Layout from "@/components/Layout";
 import { Link } from "react-router-dom";
-import { Users, Calendar, Stethoscope, Check, HeartPulse, Heart, Shield, Smile, Phone, Clock } from "lucide-react";
+import { Users, Check, HeartPulse, Stethoscope } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/Hero";
+import PhilosophySection from "@/components/PhilosophySection";
+import CallToActionSection from "@/components/CallToActionSection";
 
 const Index = () => {
-  // Top 3 services to highlight
   const highlightedServices = [
     {
       title: "Preventieve tandheelkunde",
@@ -42,27 +44,8 @@ const Index = () => {
     }
   ];
 
-  const philosophyItems = [
-    {
-      title: "Persoonlijke aandacht",
-      description: "We nemen de tijd om naar uw wensen en zorgen te luisteren en stellen een behandelplan op maat voor u samen.",
-      icon: <Heart className="h-6 w-6" />
-    },
-    {
-      title: "Moderne technieken",
-      description: "Onze praktijk is uitgerust met de nieuwste technologieën om u de beste en meest comfortabele behandelingen te bieden.",
-      icon: <Shield className="h-6 w-6" />
-    },
-    {
-      title: "Angstvrije ervaring",
-      description: "We begrijpen dat tandartsbezoeken stressvol kunnen zijn en doen er alles aan om u op uw gemak te stellen.",
-      icon: <Smile className="h-6 w-6" />
-    }
-  ];
-
   return (
     <Layout>
-      {/* Banner Section */}
       <Hero />
       
       {/* Welcome Section */}
@@ -88,7 +71,7 @@ const Index = () => {
                 <div className="rounded-xl overflow-hidden shadow-lg">
                   <img 
                     src="/lovable-uploads/42ab460c-7716-40d6-8ccc-b35dd0215c9f.png" 
-                    alt="Dr. Christian Swaelens" 
+                    alt="Dr. Christian Swaelens, tandarts" 
                     className="w-full h-auto object-cover"
                   />
                 </div>
@@ -141,7 +124,7 @@ const Index = () => {
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
-                    alt={member.name} 
+                    alt={`${member.name}, ${member.role}`}
                     className="w-full h-full object-cover object-top"
                   />
                 </div>
@@ -166,91 +149,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Philosophy Section */}
-      <section className="py-16">
-        <div className="dental-container">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#19A0D1]">Tandheelkunde met een persoonlijke touch</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto text-lg">
-              Bij Tandarts Swaelens combineren we vakmanschap met zorg en aandacht voor elke patiënt.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
-            {philosophyItems.map((item, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#19A0D1] text-white rounded-full mb-6">
-                  {item.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">{item.title}</h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{item.description}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Improved CTA Section */}
-          <div className="relative overflow-hidden bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-            {/* Subtle background pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#19A0D1]/5 to-[#1E90FF]/5"></div>
-            
-            <div className="relative p-8 md:p-12 text-center">
-              <div className="max-w-4xl mx-auto">
-                <div className="inline-flex items-center justify-center w-20 h-20 bg-[#19A0D1]/10 rounded-full mb-6">
-                  <Calendar className="h-10 w-10 text-[#19A0D1]" />
-                </div>
-                
-                <h3 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-white">Klaar om een afspraak te maken?</h3>
-                
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
-                    <div className="flex items-center justify-center w-12 h-12 bg-[#19A0D1]/10 rounded-full mx-auto mb-4">
-                      <Users className="h-6 w-6 text-[#19A0D1]" />
-                    </div>
-                    <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Bestaande patiënten</h4>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                      Maak eenvoudig online een afspraak op een moment dat u het beste uitkomt.
-                    </p>
-                    <Link 
-                      to="/afspraken"
-                      className="inline-flex items-center gap-2 bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                    >
-                      <Calendar className="h-5 w-5" />
-                      <span>Maak een afspraak</span>
-                    </Link>
-                  </div>
-                  
-                  <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
-                    <div className="flex items-center justify-center w-12 h-12 bg-[#19A0D1]/10 rounded-full mx-auto mb-4">
-                      <Phone className="h-6 w-6 text-[#19A0D1]" />
-                    </div>
-                    <h4 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">Nieuwe patiënten</h4>
-                    <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
-                      Neem telefonisch contact op om een eerste afspraak te maken.
-                    </p>
-                    <a 
-                      href="tel:+3292221213" 
-                      className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-[#19A0D1] font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border-2 border-[#19A0D1] shadow-lg"
-                    >
-                      <Phone className="h-5 w-5" />
-                      <span>09 222 12 13</span>
-                    </a>
-                  </div>
-                </div>
-                
-                <div className="bg-[#19A0D1]/10 dark:bg-[#19A0D1]/20 rounded-xl p-6 border border-[#19A0D1]/20 max-w-2xl mx-auto">
-                  <div className="flex items-center justify-center gap-3 mb-3">
-                    <Clock className="h-6 w-6 text-[#19A0D1]" />
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white">Telefonische Openingsuren</h4>
-                  </div>
-                  <p className="text-gray-700 dark:text-gray-300 text-lg">
-                    Maandag, woensdag & vrijdag: <span className="font-semibold text-[#19A0D1]">09:00-13:00 & 14:00-18:00</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <PhilosophySection />
+      <CallToActionSection />
     </Layout>
   );
 };

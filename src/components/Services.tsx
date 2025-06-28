@@ -47,7 +47,7 @@ const Services = () => {
     {
       id: "orthodontie",
       title: "Orthodontie",
-      description: "Solutions voor een rechter gebit en een mooiere glimlach voor zowel kinderen als volwassenen.",
+      description: "Oplossingen voor een rechter gebit en een mooiere glimlach voor zowel kinderen als volwassenen.",
       icon: <HeartPulse className="h-6 w-6" />,
       details: [
         "Uitgebreide evaluaties",
