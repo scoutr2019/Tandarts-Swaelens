@@ -1,73 +1,63 @@
-# Welcome to your Lovable project
+<h1 align="center">🦷 Website voor Tandartspraktijk in Gent</h1>
+<p align="center">
+  <img src="https://img.shields.io/badge/status-in%20development-blueviolet?style=for-the-badge" alt="project status"/>
+  <img src="https://img.shields.io/badge/built%20with-HTML%20%7C%20CSS%20%7C%20JS-4c8cbf?style=for-the-badge" alt="stack badge"/>
+  <img src="https://img.shields.io/badge/first%20big%20project-🚀-success?style=for-the-badge" alt="milestone badge"/>
+</p>
 
-## Project info
+<p align="center">
+  <strong>Een frisse, moderne en professionele tandartswebsite – ontwikkeld door Lode De Vlieger.</strong><br>
+  <em>Mijn <u>eerste grote webproject</u>, gebouwd met passie en oog voor detail.</em>
+</p>
 
-**URL**: https://lovable.dev/projects/e3fe624e-ab78-4994-aecd-7b71274fa7b1
+---
 
-## How can I edit this code?
+## 🎯 Over dit project
+Deze website werd op maat gemaakt voor een **tandartspraktijk in Gent** en focust op vertrouwen, rust en toegankelijkheid.  
+Belangrijkste features:
 
-There are several ways of editing your application.
+- ✅ **Volledig responsive** – perfect op mobiel, tablet en desktop  
+- 🧼 **Clean & professioneel design** – rustige kleuren, heldere typografie  
+- 🗺️ **Contact & locatie** meteen zichtbaar (Google Maps-embed)  
+- 📅 **Afspraak-ready** – klaar voor koppeling met Doctena/Doktr of eigen formulier  
+- ⚙️ **Gemakkelijk uitbreidbaar** – blog, teamoverzicht, fotogalerij …
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e3fe624e-ab78-4994-aecd-7b71274fa7b1) and start prompting.
+## 📜 Extended Description
+Dit project vormt voor mij een grote mijlpaal: **het eerste real-world webproject** met focus op een medische doelgroep.  
+Bij het bouwen lag de nadruk op:
 
-Changes made via Lovable will be committed automatically to this repo.
+1. **Gebruikerservaring (UX)**  
+   - Duidelijke indeling: wélkomssectie, diensten, tarieven, contact.  
+   - Rustige kleuren en witruimte om angst voor tandartsbezoek te verminderen.
 
-**Use your preferred IDE**
+2. **Snelheid & toegankelijkheid**  
+   - Statische HTML/CSS/JS zonder zware frameworks → razendsnelle laadtijden.  
+   - Semantische HTML voor screen-readers.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+3. **Future-proof**  
+   - Schone folderstructuur en modulair CSS, zodat uitbreidingen (blog, CMS-integratie) eenvoudig zijn.  
+   - Volledig te hosten op GitHub Pages, Vercel of klassieke hosting.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Voor mij persoonlijk betekende dit project het verfijnen van front-end-skills én leren hoe je content en techniek afstemt op de noden van een zorgprofessional.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Technologieën
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+| ⚙️ Tech | 🔎 Functie |
+|---------|-----------|
+| **HTML5** | Paginastructuur |
+| **CSS3** | Styling & lay-out |
+| **JavaScript** | Kleine interactieve elementen |
+| **Bootstrap 5** | Responsieve grid & componenten |
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/e3fe624e-ab78-4994-aecd-7b71274fa7b1) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 📁 Projectstructuur
+```plaintext
+📁 css/         → Stylesheets  
+📁 images/      → Afbeeldingen & iconen  
+📁 js/          → JavaScript-bestanden  
+📄 index.html   → Startpagina  
