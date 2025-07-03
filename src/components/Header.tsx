@@ -68,7 +68,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center gap-2 z-50 relative">
+        <div className="lg:hidden flex items-center gap-2 z-[60] relative">
           <ThemeToggle />
           <button 
             className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -86,7 +86,7 @@ const Header = () => {
 
       {/* Mobile menu overlay */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/50 transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 bg-black/50 transition-opacity duration-300 z-[51] ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
         onClick={() => setIsMobileMenuOpen(false)}
@@ -94,7 +94,7 @@ const Header = () => {
 
       {/* Mobile menu */}
       <div 
-        className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-xl transition-transform duration-300 transform ${
+        className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 shadow-xl transition-transform duration-300 transform z-[52] ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >

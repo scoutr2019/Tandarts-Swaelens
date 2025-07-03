@@ -181,7 +181,7 @@ const Privacy = () => {
           </div>
 
           <p className="mt-8 text-sm text-gray-500 text-center">
-            Laatst bijgewerkt: 28 december 2024
+            Laatst bijgewerkt: 3 juli 2025
           </p>
         </div>
       </div>
