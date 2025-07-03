@@ -1,5 +1,6 @@
 
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const Team = () => {
   const team = [
@@ -143,12 +144,11 @@ const Team = () => {
             Wilt u een afspraak maken met Dr. Swaelens of heeft u vragen? 
             Neem contact met ons op.
           </p>
-          <Link 
-            to="/afspraken" 
-            className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white font-medium py-3 px-6 md:px-8 rounded-lg transition-all duration-300 inline-block hover:scale-105 shadow-lg text-sm md:text-base"
-          >
-            Maak een afspraak
-          </Link>
+          <Button asChild className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white shadow-lg">
+            <Link to="/afspraken">
+              Maak een afspraak
+            </Link>
+          </Button>
         </div>
       </section>
     </div>

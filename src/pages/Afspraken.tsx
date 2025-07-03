@@ -1,8 +1,18 @@
+
 import Layout from "@/components/Layout";
 import PageBanner from "@/components/PageBanner";
+import { Button } from "@/components/ui/button";
 import { Phone, Mail, Calendar, Clock, CheckCircle, Heart, Shield, MapPin, Star, Users, Sparkles } from "lucide-react";
 
 const Afspraken = () => {
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+3292221213";
+  };
+
+  const handleEmailClick = () => {
+    window.location.href = "mailto:info@tandartsswaelens.be";
+  };
+
   return (
     <Layout>
       <PageBanner 
@@ -86,14 +96,23 @@ const Afspraken = () => {
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                     <h3 className="text-xl font-semibold text-white mb-6 text-center">Contact opnemen</h3>
                     <div className="space-y-4">
-                      <a href="tel:+3292221213" className="w-full bg-white text-blue-600 hover:bg-blue-50 font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 inline-flex items-center justify-center gap-3 shadow-lg">
-                        <Phone className="h-5 w-5" />
+                      <Button 
+                        onClick={handlePhoneCall}
+                        size="lg"
+                        className="w-full bg-white text-blue-600 hover:bg-blue-50 font-semibold shadow-lg"
+                      >
+                        <Phone className="h-5 w-5 mr-3" />
                         Bel: 09 222 12 13
-                      </a>
-                      <a href="mailto:info@tandartsswaelens.be" className="w-full bg-white/15 hover:bg-white/25 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 inline-flex items-center justify-center gap-3 border border-white/30">
-                        <Mail className="h-5 w-5" />
+                      </Button>
+                      <Button 
+                        onClick={handleEmailClick}
+                        variant="outline"
+                        size="lg"
+                        className="w-full bg-white/15 hover:bg-white/25 text-white font-semibold border-white/30 hover:border-white/50"
+                      >
+                        <Mail className="h-5 w-5 mr-3" />
                         E-mail versturen
-                      </a>
+                      </Button>
                     </div>
                     <div className="mt-6 pt-6 border-t border-white/20 text-center">
                       <div className="flex items-center justify-center gap-2 text-blue-100 text-sm">
@@ -150,14 +169,21 @@ const Afspraken = () => {
                     Ondervindt u problemen met het online systeem? Neem gerust contact met ons op.
                   </p>
                   <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-                    <a href="tel:+3292221213" className="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                      <Phone className="h-5 w-5" />
-                      <span>09 222 12 13</span>
-                    </a>
-                    <a href="mailto:info@tandartsswaelens.be" className="inline-flex items-center gap-3 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors">
-                      <Mail className="h-5 w-5" />
-                      <span>info@tandartsswaelens.be</span>
-                    </a>
+                    <Button 
+                      onClick={handlePhoneCall}
+                      className="bg-blue-600 hover:bg-blue-700 text-white"
+                    >
+                      <Phone className="h-5 w-5 mr-3" />
+                      09 222 12 13
+                    </Button>
+                    <Button 
+                      onClick={handleEmailClick}
+                      variant="ghost"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                    >
+                      <Mail className="h-5 w-5 mr-3" />
+                      info@tandartsswaelens.be
+                    </Button>
                   </div>
                 </div>
               </div>

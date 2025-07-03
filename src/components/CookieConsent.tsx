@@ -1,138 +1,104 @@
 
 import { useState, useEffect } from "react";
-import { Cookie, Settings } from "lucide-react";
-import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 import CookieSettings from "./CookieSettings";
 
-interface CookiePreferences {
-  necessary: boolean;
-  functional: boolean;
-  analytics: boolean;
-  marketing: boolean;
-}
-
 const CookieConsent = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [showDetails, setShowDetails] = useState(false);
-  const [preferences, setPreferences] = useState<CookiePreferences>({
-    necessary: true,
-    functional: false,
-    analytics: false,
-    marketing: false,
-  });
+  const [showBanner, setShowBanner] = useState(false);
+  const [showSettings, setShowSettings] = useState(false);
 
   useEffect(() => {
-    const hasConsented = localStorage.getItem('cookieConsent');
-    if (!hasConsented) {
-      setIsVisible(true);
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      setShowBanner(true);
     }
   }, []);
 
-  const handleAcceptAll = () => {
-    const allAccepted = {
+  const acceptAll = () => {
+    const preferences = {
       necessary: true,
-      functional: true,
       analytics: true,
       marketing: true,
+      preferences: true
     };
-    localStorage.setItem('cookieConsent', 'accepted');
-    localStorage.setItem('cookiePreferences', JSON.stringify(allAccepted));
-    setIsVisible(false);
+    localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    setShowBanner(false);
   };
 
-  const handleRejectAll = () => {
-    const onlyNecessary = {
+  const acceptNecessary = () => {
+    const preferences = {
       necessary: true,
-      functional: false,
       analytics: false,
       marketing: false,
+      preferences: false
     };
-    localStorage.setItem('cookieConsent', 'rejected');
-    localStorage.setItem('cookiePreferences', JSON.stringify(onlyNecessary));
-    setIsVisible(false);
+    localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    setShowBanner(false);
   };
 
-  const handleSavePreferences = () => {
-    localStorage.setItem('cookieConsent', 'customized');
-    localStorage.setItem('cookiePreferences', JSON.stringify(preferences));
-    setIsVisible(false);
+  const openSettings = () => {
+    setShowSettings(true);
   };
 
-  const togglePreference = (key: keyof CookiePreferences) => {
-    if (key === 'necessary') return;
-    setPreferences(prev => ({
-      ...prev,
-      [key]: !prev[key]
-    }));
+  const closeSettings = () => {
+    setShowSettings(false);
   };
 
-  if (!isVisible) return null;
+  const saveSettings = (preferences: any) => {
+    localStorage.setItem('cookie-consent', JSON.stringify(preferences));
+    setShowBanner(false);
+    setShowSettings(false);
+  };
+
+  if (!showBanner) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 shadow-lg">
-      <div className="dental-container py-4">
-        {!showDetails ? (
-          <div className="flex flex-col md:flex-row md:items-center gap-4">
-            <div className="flex items-start gap-3 flex-1">
-              <Cookie className="h-5 w-5 text-[#19A0D1] flex-shrink-0 mt-0.5" />
-              <div className="text-sm text-gray-700 dark:text-gray-300">
-                <p className="mb-2">
-                  Deze website gebruikt cookies om uw ervaring te verbeteren en onze diensten te analyseren. 
-                  U kunt uw voorkeuren aanpassen of alle cookies accepteren.
-                </p>
-                <p>
-                  Meer informatie in ons{" "}
-                  <Link to="/cookies" className="text-[#19A0D1] hover:underline font-medium">
-                    cookiebeleid
-                  </Link>
-                  {" "}en{" "}
-                  <Link to="/privacy" className="text-[#19A0D1] hover:underline font-medium">
-                    privacybeleid
-                  </Link>
-                  .
-                </p>
-              </div>
+    <>
+      <div className="fixed bottom-0 left-0 right-0 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 shadow-lg z-50 p-4">
+        <div className="dental-container">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">🍪 Cookie Toestemming</h3>
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                We gebruiken cookies om uw ervaring te verbeteren, websiteverkeer te analyseren en voor marketingdoeleinden. 
+                Door op "Alles accepteren" te klikken, stemt u in met ons gebruik van cookies.
+              </p>
             </div>
-            <div className="flex flex-col sm:flex-row gap-2 md:flex-shrink-0">
+            <div className="flex flex-col sm:flex-row gap-2 min-w-fit">
               <Button
+                onClick={openSettings}
                 variant="outline"
                 size="sm"
-                onClick={() => setShowDetails(true)}
-                className="text-gray-600 dark:text-gray-400 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600"
               >
-                <Settings className="h-4 w-4 mr-2" />
                 Instellingen
               </Button>
               <Button
+                onClick={acceptNecessary}
                 variant="outline"
                 size="sm"
-                onClick={handleRejectAll}
-                className="text-gray-600 dark:text-gray-400 border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800"
+                className="text-gray-600 dark:text-gray-300 border-gray-300 dark:border-gray-600"
               >
-                Alleen noodzakelijke
+                Alleen noodzakelijk
               </Button>
               <Button
+                onClick={acceptAll}
                 size="sm"
-                onClick={handleAcceptAll}
-                className="bg-[#19A0D1] hover:bg-[#1489B8] text-white"
+                className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white"
               >
-                Alle accepteren
+                Alles accepteren
               </Button>
             </div>
           </div>
-        ) : (
-          <CookieSettings
-            preferences={preferences}
-            onTogglePreference={togglePreference}
-            onSavePreferences={handleSavePreferences}
-            onRejectAll={handleRejectAll}
-            onAcceptAll={handleAcceptAll}
-            onClose={() => setShowDetails(false)}
-          />
-        )}
+        </div>
       </div>
-    </div>
+
+      <CookieSettings 
+        isOpen={showSettings}
+        onClose={closeSettings}
+        onSave={saveSettings}
+      />
+    </>
   );
 };
 

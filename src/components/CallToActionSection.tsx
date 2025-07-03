@@ -1,8 +1,13 @@
 
 import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { Calendar, Users, Phone, Clock } from "lucide-react";
 
 const CallToActionSection = () => {
+  const handlePhoneCall = () => {
+    window.location.href = "tel:+3292221213";
+  };
+
   return (
     <section className="py-16">
       <div className="dental-container">
@@ -26,13 +31,12 @@ const CallToActionSection = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Maak eenvoudig online een afspraak op een moment dat u het beste uitkomt.
                   </p>
-                  <Link 
-                    to="/afspraken"
-                    className="inline-flex items-center gap-2 bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
-                  >
-                    <Calendar className="h-5 w-5" />
-                    <span>Maak een afspraak</span>
-                  </Link>
+                  <Button asChild className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white shadow-lg">
+                    <Link to="/afspraken">
+                      <Calendar className="h-5 w-5 mr-2" />
+                      Maak een afspraak
+                    </Link>
+                  </Button>
                 </div>
                 
                 <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
@@ -43,13 +47,14 @@ const CallToActionSection = () => {
                   <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">
                     Neem telefonisch contact op om een eerste afspraak te maken.
                   </p>
-                  <a 
-                    href="tel:+3292221213" 
-                    className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-[#19A0D1] font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 border-2 border-[#19A0D1] shadow-lg"
+                  <Button 
+                    onClick={handlePhoneCall}
+                    variant="outline"
+                    className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-[#19A0D1] border-2 border-[#19A0D1] shadow-lg"
                   >
-                    <Phone className="h-5 w-5" />
-                    <span>09 222 12 13</span>
-                  </a>
+                    <Phone className="h-5 w-5 mr-2" />
+                    09 222 12 13
+                  </Button>
                 </div>
               </div>
               
