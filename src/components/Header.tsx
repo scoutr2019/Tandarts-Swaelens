@@ -42,7 +42,7 @@ const Header = () => {
       className={`fixed top-0 left-0 w-full transition-all duration-300 ${
         isScrolled ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800 py-2" : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-3"
       }`}
-      style={{ zIndex: 99999 }}
+      style={{ zIndex: 999999 }}
     >
       <div className="dental-container flex justify-between items-center">
         <Link to="/" className="flex items-center relative">
@@ -69,7 +69,7 @@ const Header = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden flex items-center gap-2 relative" style={{ zIndex: 99999 }}>
+        <div className="lg:hidden flex items-center gap-2 relative" style={{ zIndex: 999999 }}>
           <ThemeToggle />
           <button 
             className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
@@ -87,10 +87,10 @@ const Header = () => {
 
       {/* Mobile menu overlay */}
       <div 
-        className={`lg:hidden fixed inset-0 bg-black/90 backdrop-blur-md transition-opacity duration-300 ${
+        className={`lg:hidden fixed inset-0 bg-black/95 backdrop-blur-lg transition-opacity duration-300 ${
           isMobileMenuOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
         }`}
-        style={{ zIndex: 99997 }}
+        style={{ zIndex: 999997 }}
         onClick={() => setIsMobileMenuOpen(false)}
       />
 
@@ -99,7 +99,7 @@ const Header = () => {
         className={`lg:hidden fixed top-0 right-0 h-full w-80 max-w-[85vw] bg-white dark:bg-gray-900 border-l-4 border-dental-blue-medium shadow-2xl transition-transform duration-300 transform ${
           isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
-        style={{ zIndex: 99998 }}
+        style={{ zIndex: 999998 }}
       >
         <nav className="pt-20 px-6 flex flex-col gap-6">
           <Link 
