@@ -26,11 +26,19 @@ const Hero = () => {
             Welkom bij Tandartspraktijk Swaelens in Gent. Wij staan voor persoonlijke tandheelkunde, met aandacht voor detail en een angstvrije ervaring.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Link to="/afspraken" className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+            <Link 
+              to="/afspraken" 
+              className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label="Online een afspraak maken"
+            >
               <Calendar className="h-5 w-5" />
               <span>Maak een afspraak</span>
             </Link>
-            <Link to="/contact" className="border-2 border-white hover:bg-white/10 text-white font-medium py-2 px-4 md:py-3 md:px-6 rounded-lg transition-colors flex items-center justify-center">
+            <Link 
+              to="/contact" 
+              className="border-2 border-white hover:bg-white/10 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/50"
+              aria-label="Neem contact met ons op"
+            >
               <span>Contacteer ons</span>
             </Link>
           </div>

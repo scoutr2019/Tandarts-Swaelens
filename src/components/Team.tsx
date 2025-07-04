@@ -144,8 +144,11 @@ const Team = () => {
             Wilt u een afspraak maken met Dr. Swaelens of heeft u vragen? 
             Neem contact met ons op.
           </p>
-          <Button asChild className="bg-[#19A0D1] hover:bg-[#19A0D1]/80 text-white shadow-lg">
-            <Link to="/afspraken">
+          <Button 
+            asChild 
+            className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white shadow-lg hover:shadow-xl transition-all duration-200 px-6 py-3 text-base font-medium focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
+          >
+            <Link to="/afspraken" aria-label="Maak een afspraak online">
               Maak een afspraak
             </Link>
           </Button>

@@ -62,7 +62,11 @@ const Header = () => {
             <Link to="/contact" className={`font-medium text-dental-blue-dark dark:text-dental-blue-light hover:text-dental-blue-medium dark:hover:text-dental-blue-medium transition-colors ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}>Contact</Link>
           </nav>
           <ThemeToggle />
-          <Link to="/afspraken" className="dental-btn-primary flex items-center gap-2">
+          <Link 
+            to="/afspraken" 
+            className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-medium px-4 py-2 rounded-lg transition-colors duration-200 flex items-center gap-2 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
+            aria-label="Maak een afspraak online"
+          >
             <Calendar className="h-4 w-4" />
             <span>Maak een afspraak</span>
           </Link>
@@ -72,9 +76,10 @@ const Header = () => {
         <div className="lg:hidden flex items-center gap-2 relative" style={{ zIndex: 999999 }}>
           <ThemeToggle />
           <button 
-            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+            className="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            aria-label={isMobileMenuOpen ? "Sluit menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <X className="h-6 w-6 text-dental-blue-dark dark:text-dental-blue-light" />
@@ -92,6 +97,7 @@ const Header = () => {
         }`}
         style={{ zIndex: 999997 }}
         onClick={() => setIsMobileMenuOpen(false)}
+        aria-hidden="true"
       />
 
       {/* Mobile menu */}
@@ -104,36 +110,37 @@ const Header = () => {
         <nav className="pt-20 px-6 flex flex-col gap-6">
           <Link 
             to="/" 
-            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}
+            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/" ? "text-dental-blue-medium" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Home
           </Link>
           <Link 
             to="/diensten" 
-            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}
+            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/diensten" ? "text-dental-blue-medium" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Diensten
           </Link>
           <Link 
             to="/team" 
-            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}
+            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/team" ? "text-dental-blue-medium" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Team
           </Link>
           <Link 
             to="/contact" 
-            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}
+            className={`font-medium text-lg text-dental-blue-dark dark:text-dental-blue-light py-3 border-b border-dental-blue-light dark:border-gray-700 transition-colors hover:text-dental-blue-medium dark:hover:text-dental-blue-medium ${location.pathname === "/contact" ? "text-dental-blue-medium" : ""}`}
             onClick={() => setIsMobileMenuOpen(false)}
           >
             Contact
           </Link>
           <Link 
             to="/afspraken" 
-            className="dental-btn-primary flex items-center justify-center gap-2 mt-6 py-4 text-lg"
+            className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-medium flex items-center justify-center gap-2 mt-6 py-4 px-6 rounded-lg text-lg transition-colors duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
             onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Maak een afspraak online"
           >
             <Calendar className="h-5 w-5" />
             <span>Maak een afspraak</span>

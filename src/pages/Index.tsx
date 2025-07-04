@@ -62,7 +62,11 @@ const Index = () => {
                 <p className="text-gray-700 dark:text-gray-200 mb-6">
                   Dr. Christian Swaelens en zijn team zetten zich in voor preventieve tandheelkunde en persoonlijke zorg, afgestemd op de behoeften van elke patiënt. We nemen de tijd om naar u te luisteren en uw vragen te beantwoorden.
                 </p>
-                <Link to="/team" className="bg-[#1E90FF] hover:bg-[#1E90FF]/80 text-white font-medium py-2 px-4 rounded-lg transition-colors flex items-center gap-2 w-fit">
+                <Link 
+                  to="/team" 
+                  className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center gap-2 w-fit shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
+                  aria-label="Leer ons team kennen"
+                >
                   <Users className="h-5 w-5" />
                   <span>Leer ons team kennen</span>
                 </Link>
@@ -84,14 +88,19 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Onze diensten</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
               {highlightedServices.map((service, index) => (
-                <Link to={service.link} key={index} className="block hover:scale-105 transition-transform">
-                  <Card className="h-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg">
+                <Link 
+                  to={service.link} 
+                  key={index} 
+                  className="block hover:scale-105 transition-transform duration-200 focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50 rounded-lg"
+                  aria-label={`Leer meer over ${service.title}`}
+                >
+                  <Card className="h-full bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-md hover:shadow-lg transition-shadow duration-200">
                     <CardContent className="p-6">
                       <div className="flex items-center gap-4 mb-4">
-                        <div className="p-3 bg-[#EAF6FF] dark:bg-[#1E90FF]/30 rounded-lg text-[#1E90FF]">
+                        <div className="p-3 bg-[#EAF6FF] dark:bg-[#19A0D1]/30 rounded-lg text-[#19A0D1]">
                           {service.icon}
                         </div>
-                        <h3 className="text-xl font-semibold text-[#1E90FF]">{service.title}</h3>
+                        <h3 className="text-xl font-semibold text-[#19A0D1]">{service.title}</h3>
                       </div>
                       <p className="text-gray-700 dark:text-gray-300">{service.description}</p>
                     </CardContent>
@@ -100,7 +109,11 @@ const Index = () => {
               ))}
             </div>
             <div className="text-center">
-              <Link to="/diensten" className="bg-[#1E90FF] hover:bg-[#1E90FF]/80 text-white font-medium py-3 px-6 rounded-lg transition-colors inline-flex items-center justify-center gap-2">
+              <Link 
+                to="/diensten" 
+                className="bg-[#19A0D1] hover:bg-[#19A0D1]/90 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 inline-flex items-center justify-center gap-2 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
+                aria-label="Bekijk alle tandheelkundige diensten"
+              >
                 <span>Bekijk alle diensten</span>
               </Link>
             </div>
@@ -120,12 +133,12 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden">
+              <div key={index} className="bg-white dark:bg-gray-700 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-200">
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
                     alt={`${member.name}, ${member.role}`}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-6">
@@ -140,7 +153,8 @@ const Index = () => {
           <div className="text-center">
             <Link 
               to="/team" 
-              className="text-[#19A0D1] hover:text-[#19A0D1]/80 font-medium inline-flex items-center gap-2 border-b border-[#19A0D1] pb-1 transition-colors"
+              className="text-[#19A0D1] hover:text-[#19A0D1]/80 font-medium inline-flex items-center gap-2 border-b border-[#19A0D1] pb-1 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-[#19A0D1]/50"
+              aria-label="Leer meer over ons volledige team"
             >
               <span>Leer meer over ons team</span>
               <span>→</span>
