@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header 
       className={`fixed top-0 left-0 w-full transition-all duration-300 ${
-        isScrolled ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800 py-2" : "bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm py-3"
+        isScrolled ? "bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-800 py-2" : "bg-white dark:bg-gray-900 py-3"
       }`}
       style={{ zIndex: 999999 }}
     >
