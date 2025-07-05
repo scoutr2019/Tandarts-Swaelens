@@ -1,3 +1,4 @@
+
 import Layout from "@/components/Layout";
 import PageBanner from "@/components/PageBanner";
 import { Button } from "@/components/ui/button";
@@ -84,6 +85,10 @@ const Afspraken = () => {
                       <div className="flex items-center gap-3 text-blue-100">
                         <Star className="h-5 w-5 text-yellow-300" />
                         <span>Persoonlijk behandelplan</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-blue-100">
+                        <Star className="h-5 w-5 text-yellow-300" />
+                        <span>Moderne technieken & apparatuur</span>
                       </div>
                     </div>
                   </div>
