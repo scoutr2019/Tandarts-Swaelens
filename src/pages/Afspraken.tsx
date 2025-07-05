@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import PageBanner from "@/components/PageBanner";
 import { Button } from "@/components/ui/button";
@@ -223,7 +222,7 @@ const Afspraken = () => {
                     <span className="text-green-700 dark:text-green-400 font-semibold">09:00–13:00, 14:00–18:00</span>
                   </div>
                   <div className="flex justify-between items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600">
-                    <span className="font-medium text-gray-700 dark:text-gray-300">Weekend</span>
+                    <span className="font-medium text-gray-700 dark:text-gray-300">Weekend & Feestdagen</span>
                     <span className="text-gray-500 dark:text-gray-400">Gesloten</span>
                   </div>
                 </div>
