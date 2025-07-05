@@ -4,12 +4,14 @@ import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
-    <section className="relative h-[500px] md:h-[600px]">
+    <section className="relative h-[500px] md:h-[600px]" style={{ willChange: 'transform', transform: 'translate3d(0, 0, 0)' }}>
       {/* Full-width background image */}
       <div 
         className="absolute inset-0 bg-cover bg-center" 
         style={{ 
-          backgroundImage: "url('/lovable-uploads/fc4781a1-37b7-475e-b988-d6750954400f.png')"
+          backgroundImage: "url('/lovable-uploads/fc4781a1-37b7-475e-b988-d6750954400f.png')",
+          willChange: 'transform',
+          transform: 'translate3d(0, 0, 0)'
         }}
       >
         <div className="absolute inset-0 bg-[#19A0D1]/70 dark:bg-[#19A0D1]/80"></div>
@@ -28,7 +30,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link 
               to="/afspraken" 
-              className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="bg-white text-[#19A0D1] hover:bg-gray-100 font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white/50 card-hover"
               aria-label="Online een afspraak maken"
             >
               <Calendar className="h-5 w-5" />
@@ -36,7 +38,7 @@ const Hero = () => {
             </Link>
             <Link 
               to="/contact" 
-              className="border-2 border-white hover:bg-white/10 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/50"
+              className="border-2 border-white hover:bg-white/10 text-white font-medium py-3 px-6 rounded-lg transition-colors duration-200 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-white/50 card-hover"
               aria-label="Neem contact met ons op"
             >
               <span>Contacteer ons</span>
