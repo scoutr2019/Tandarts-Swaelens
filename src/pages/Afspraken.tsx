@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import PageBanner from "@/components/PageBanner";
 import { Button } from "@/components/ui/button";
@@ -86,10 +85,6 @@ const Afspraken = () => {
                         <Star className="h-5 w-5 text-yellow-300" />
                         <span>Persoonlijk behandelplan</span>
                       </div>
-                      <div className="flex items-center gap-3 text-blue-100">
-                        <Star className="h-5 w-5 text-yellow-300" />
-                        <span>Geen wachtlijsten</span>
-                      </div>
                     </div>
                   </div>
                   
@@ -117,7 +112,7 @@ const Afspraken = () => {
                     <div className="mt-6 pt-6 border-t border-white/20 text-center">
                       <div className="flex items-center justify-center gap-2 text-blue-100 text-sm">
                         <MapPin className="h-4 w-4" />
-                        <span>Sint-Denijs-Westrem, Gent</span>
+                        <span>Kortrijksesteenweg 215, 9000 Gent</span>
                       </div>
                     </div>
                   </div>
