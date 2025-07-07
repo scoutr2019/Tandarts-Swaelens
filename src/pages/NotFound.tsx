@@ -6,11 +6,9 @@ import { Home, ArrowLeft } from "lucide-react";
 const NotFound = () => {
   const location = useLocation();
 
+  // Track 404 errors silently without console output
   useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
+    // Error tracking could be added here for analytics
   }, [location.pathname]);
 
   return (
